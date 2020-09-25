@@ -7,4 +7,5 @@ body {
 }
 a.NoDecor{
 	text-decoration: none;
+	color: black;
 }
