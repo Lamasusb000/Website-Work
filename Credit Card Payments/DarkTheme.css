@@ -1,0 +1,21 @@
+	fieldset{
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:50%;
+	height:50%;
+	}
+	body{
+	background-color:black;
+	color:white;
+	}
+	h1{
+	text-align:Center;
+	}
+	h2{
+	text-align:Center;
+	}
+	input,select{
+		background-color: gray;
+	}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	Timer
+</title>
+<script src="StyleSheetChange.js"></script>
+<link  id="PageStyle" rel="stylesheet" type="text/css" href="LightTheme.css">
+</head>
+<body>
+    <button id="stylesheet1" onclick="GoLight();"> Default Style Sheet </button>
+	<button id="stylesheet2" onclick="GoDark();"> Dark Style Sheet </button>
+<fieldset id="CenterText">
+	<b id="QuestionOne">
+		<h1>
+			Select Pay Period Duration 
+		</h1>
+		<form action="javascript:void(0);" method="post" enctype="text/plain" id="form">
+			<select id="PayPeriod">
+				<option value="1">One Week Period</option>
+				<option value="2">Two Week Period</option>
+			</select>
+			<input type="submit" onclick="PageSelector()">
+		</form>
+	</b>
+</fieldset>
+<script src="Functions.js"></script>
+</body>
+</html>
