@@ -1,0 +1,53 @@
+[data-theme="light"] {
+	--background-color: rgb(233, 227, 227);
+	--text-color: black;
+	--tab-background:#f1f1f1;
+	--tab-hover:#ddd;
+	--tab-active:#ccc;
+}
+[data-theme="dark"] {
+	--background-color: rgba(24, 21, 21, 0.74);    
+	--text-color:rgb(204, 198, 198);
+	--tab-background:rgba(104, 101, 101, 0.74);
+	--tab-hover:rgba(131, 113, 113, 0.74);
+	--tab-active:rgba(48, 46, 46, 0.74);
+}
+body {
+	background: var(--background-color);
+	color: var(--text-color);
+    transition: background 1.5s;
+}
+.tab{
+	overflow: hidden;
+	border: 1px solid var(--tab-active);
+	background-color: var(--tab-background);
+}
+.tab button{
+	background-color: inherit;
+	color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+.tab button:hover{
+	background-color:var(--tab-hover);
+}
+.tab button.active{
+	background-color: var(--tab-active);
+}
+.tabcontent{
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+}
+.tabcontent{
+	animation: fadeEffect 1s;
+}
+@keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }

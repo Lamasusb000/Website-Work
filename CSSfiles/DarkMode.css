@@ -1,10 +1,13 @@
 [data-theme="light"] {
-    --primary-color: white;    
+	--background-color: white;
+	--text-color: black;
 }
 [data-theme="dark"] {
-    --primary-color: grey;    
+	--background-color: rgba(14, 9, 9, 0.74);    
+	--text-color:rgb(204, 198, 198);
 }
 body {
-    background: var(--primary-color);
+	background: var(--background-color);
+	color: var(--text-color);
     transition: background 1.5s;
 }
