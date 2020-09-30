@@ -23,9 +23,10 @@
 		<button class="tablinks" onclick="OpenMenu(event, 'Menu')" id="defaultOpen">Menu</button>
 		<button class="tablinks" onclick="OpenMenu(event, 'MainProjects')">Main Projects</button>
 		<button class="tablinks" onclick="OpenMenu(event, 'RandomProjects')">Random Projects</button>
+		<button class="tablinks" onclick="OpenMenu(event, 'SiteSettings')">Site Settings</button>
 	</div>
 	<div id="Menu" class="tabcontent">
-		<h1>
+		<h1 id="Welcome">
 			Welcome to Junior's Random Project Index
 		</h1>
 		<p>
@@ -100,8 +101,18 @@
 			</ul>
 		</a>
 	</div>
+	<div id="SiteSettings" class="tabcontent">
+		<h1>
+			Change Username
+		</h1>
+		<input type="text" name="Username" id="Username">
+		<input type="button" value="Change Username" onclick="ChangeUsername()">
+		<input type="button" value="Delete Username" onclick="DeleteUsername()">
+		<p id="NameOutput"></p>
+	</div>
 	<script>
 		document.getElementById("defaultOpen").click();
 	</script>
+	<script src="/JavascriptFiles/LocalStorageUser.js" onload="SendToPage()"></script>
 </body>
 </html>
