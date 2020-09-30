@@ -20,7 +20,7 @@ function SendToPage(){
 }
 
 function ResetNameOutput(){
-	document.getElementById("NameOutput").innerHTML = ""
+	document.getElementById("NameOutput").innerHTML = "<br>"
 }
 function DeleteUsername(){
 	localStorage.removeItem("User's Name")
