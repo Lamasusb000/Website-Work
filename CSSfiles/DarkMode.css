@@ -1,3 +1,11 @@
+:root{
+	--background-color: rgb(233, 227, 227);
+	--text-color: black;
+	--tab-background:#f1f1f1;
+	--tab-hover:#ddd;
+	--tab-active:#ccc;
+	--transition: 0s;
+}
 [data-theme="light"] {
 	--background-color: white;
 	--text-color: black;
@@ -9,5 +17,5 @@
 body {
 	background: var(--background-color);
 	color: var(--text-color);
-    transition: background 1;
+    transition: background .5s;
 }
