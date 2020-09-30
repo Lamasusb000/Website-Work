@@ -1,25 +1,45 @@
-<html>
-	<head>
-		<link rel="stylesheet" href="CenterPage.css">
-	</head>
-	<title>
-		Website Listing Page
-	</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index With Tabs!</title>
+	<link rel="stylesheet" href="CSSfiles/Tabcreation.css">
+	<script src="JavascriptFiles/TabsScript.js"></script>
+</head>
 <body>
 	<h1>
-		Website Listings
+		Website Page Selection!
 	</h1>
-	<a href="PagePrinter/Display.html" class="NoDecor">
-		<h2>
-			Page Printer
-		</h2>
-	</a>
-	<a href="Timer/Timer.htm" class="NoDecor">
-		<h2>
-			Timer Page
-		</h2>
-	</a>
+	<div class="tab">
+		<button class="tablinks" onclick="OpenMenu(event, 'Menu')" id="defaultOpen">Menu</button>
+		<button class="tablinks" onclick="OpenMenu(event, 'Links')">Links</button>
+		<button class="tablinks" onclick="OpenMenu(event,'MoreInfo')">More Info</button>
+	</div>
+	<div id="Menu" class="tabcontent">
+		<h1>
+			This is The Main Menu!
+		</h1>
+	</div>
+	<div id="Links" class="tabcontent">
+		<a href="PagePrinter/Display.html" class="NoDecor">
+			<h2>
+				Page Printer
+			</h2>
+		</a>
+		<a href="Timer/Timer.htm" class="NoDecor">
+			<h2>
+				Timer Page
+			</h2>
+		</a>
+	</div>
+	<div id="MoreInfo" class="tabcontent">
+		<h1>
+			This is The More Info Menu!
+		</h1>
+	</div>
+	<script>
+		document.getElementById("defaultOpen").click();
+	</script>
 </body>
 </html>
