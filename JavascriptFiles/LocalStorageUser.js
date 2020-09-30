@@ -1,7 +1,7 @@
 function ChangeUsername(){
 	console.log(document.getElementById("Username").value)
 	if (document.getElementById("Username").value == null | document.getElementById("Username").value == "null" | document.getElementById("Username").value == ""){
-		document.getElementById("NameOutput").innerHTML = "<p class='animated'>Click The Button Below If You Wish To Delete Your Name<p>"
+		document.getElementById("NameOutput").innerHTML = "<p class='animated'>Click The Button To the Side If You Wish To Delete Your Name<p>"
 	}else{
 		localStorage.setItem("User's Name", document.getElementById("Username").value)
 		document.getElementById("NameOutput").innerHTML = "<p class='animated'>Username Has Been Changed!<p>"
