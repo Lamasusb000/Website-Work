@@ -18,7 +18,7 @@
 	<meta name="msapplication-TileColor" content="#2b5797">
 	<meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body onload="DarkCheck()">
 	<h1>
 		Central Index
 	</h1>
@@ -103,6 +103,7 @@
 				My First HTML Document Where I Show Most Basic HTML Tags
 			</ul>
 		</a>
+		<a href="/Projects/TestFiles/Test.html">Test</a>
 	</div>
 	<div id="SiteSettings" class="tabcontent">
 		<h1>
@@ -119,7 +120,6 @@
 	</div>
 	<script>
 		document.getElementById("defaultOpen").click();
-		DarkCheck()
 	</script>
 	<script src="/JavascriptFiles/LocalStorageUser.js" onload="SendToPage()"></script>
 </body>

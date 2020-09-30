@@ -1,9 +1,13 @@
+:root{
+	--transition:0s;
+}
 [data-theme="light"] {
 	--background-color: rgb(233, 227, 227);
 	--text-color: black;
 	--tab-background:#f1f1f1;
 	--tab-hover:#ddd;
 	--tab-active:#ccc;
+	--transition: .5s;
 }
 [data-theme="dark"] {
 	--background-color: rgba(24, 21, 21, 0.74);    
@@ -11,11 +15,12 @@
 	--tab-background:rgba(104, 101, 101, 0.74);
 	--tab-hover:rgba(131, 113, 113, 0.74);
 	--tab-active:rgba(48, 46, 46, 0.74);
+	--transition: .5s;
 }
 body {
 	background: var(--background-color);
 	color: var(--text-color);
-    transition: background 1.5s;
+    transition: var(--transition);
 }
 .tab{
 	overflow: hidden;
@@ -24,7 +29,7 @@ body {
 }
 .tab button{
 	background-color: inherit;
-	color: inherit;
+	color:var(--text-color);
 	float: left;
 	border: none;
 	outline: none;
@@ -42,7 +47,7 @@ body {
 .tabcontent{
 	display: none;
 	padding: 6px 12px;
-	border: 1px solid #ccc;
+	border: 1px solid var(--tab-active);
 }
 .tabcontent{
 	animation: fadeEffect 1s;

@@ -1,5 +1,6 @@
 window.RootDataSet = document.documentElement.dataset
 
+
 function DarkSwitch(){
 	if (RootDataSet.theme == "light") {
 		window.RootDataSet.theme = "dark"
