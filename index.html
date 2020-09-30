@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="CSSfiles/Tabcreation.css">
 	<link rel="stylesheet" href="CSSfiles/NoLinkDeco.css">
 	<link rel="stylesheet" href="cssfiles/AnimatedText.css">
+	<link rel="stylesheet" href="cssfiles/DarkMode.css">
+	<script src="/JavascriptFiles/DarkMode.js"></script>
 	<script src="JavascriptFiles/TabsScript.js"></script>
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -110,9 +112,14 @@
 		<input type="button" value="Change Username" onclick="ChangeUsername()">
 		<input type="button" value="Delete Username" onclick="DeleteUsername()">
 		<p id="NameOutput"><br></p>
+		<h1>
+			Dark Mode Toggle
+		</h1>
+		<input type="button" value="Toggle Mode" id="DarkSwitch" onclick="DarkSwitch()">
 	</div>
 	<script>
 		document.getElementById("defaultOpen").click();
+		DarkCheck()
 	</script>
 	<script src="/JavascriptFiles/LocalStorageUser.js" onload="SendToPage()"></script>
 </body>

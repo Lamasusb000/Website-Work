@@ -1,0 +1,10 @@
+[data-theme="light"] {
+    --primary-color: white;    
+}
+[data-theme="dark"] {
+    --primary-color: grey;    
+}
+body {
+    background: var(--primary-color);
+    transition: background 1.5s;
+}
