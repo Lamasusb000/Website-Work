@@ -7,8 +7,12 @@
 	--transition: 0s;
 }
 [data-theme="light"] {
-	--background-color: white;
+	--background-color: rgb(233, 227, 227);
 	--text-color: black;
+	--tab-background:#f1f1f1;
+	--tab-hover:#ddd;
+	--tab-active:#ccc;
+	--transition: 0s;
 }
 [data-theme="dark"] {
 	--background-color: rgba(14, 9, 9, 0.74);    

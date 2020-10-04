@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="/JavascriptFiles/DarkMode.js" onload="DarkCheck()"></script>
+	<script src="/JavascriptFiles/DataCollection.js"></script>
+	<link rel="stylesheet" href="/CSSfiles/AnimatedText.css">
+	<link rel="stylesheet" href="/CSSfiles/DarkMode.css">
+	<link rel="stylesheet" href="/CSSfiles/AutoCaps.css">
+</head>
+<body>
+	<div class="Caps" class="animated">
+	<h1>Data Collection Explained</h1>
+	<p>
+		This website uses localstorage methods to
+		<br>
+		store data on your browser instead of
+		<br>
+		servers which is safer!
+		<br><br>
+		Data Collection Reasons are as follows
+		<ul>
+			<li>
+				"User's Name"
+				<ul>
+					<li>
+						Stores Your Name to make the experience more personal with greatings!
+					</li>
+					<li>
+						This is a optional feature and website will work without it!
+					</li>
+				</ul>
+			</li>
+			<li>
+				"Theme"
+				<ul>
+					<li>
+						Used in order keep darkmode on return and cross pages!
+					</li>
+					<li>
+						Unfortunately this storage method is required for darkmode to work...
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</p>
+	<input type="button" value="View Your Data" onclick="FindData()">
+	<input type="button" value="Delete All Your Data" onclick="DeleteData()">
+	<p id="DataOutput">
+		<br>
+	</p>
+	</div>
+</body>
+</html>

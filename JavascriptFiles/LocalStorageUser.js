@@ -16,7 +16,7 @@ function SendToPage(){
 	}else{
 		document.getElementById("Welcome").innerHTML = "Welcome " + localStorage.getItem("User's Name") + ", To Junior's Random Project Index"
 	}
-	setTimeout(ResetNameOutput, 2500)
+	setTimeout(ResetNameOutput, 5000)
 }
 
 function ResetNameOutput(){

@@ -2,13 +2,14 @@ window.RootDataSet = document.documentElement.dataset
 
 
 function DarkSwitch(){
-	if (RootDataSet.theme == "light") {
+	console.log(RootDataSet.theme)
+	if (RootDataSet.theme == undefined) {
 		window.RootDataSet.theme = "dark"
 		localStorage.setItem("Theme", "dark")
 	}else{
 		if (RootDataSet.theme == "dark"){
-			window.RootDataSet.theme = "light"
-			localStorage.setItem("Theme", "light")
+			window.RootDataSet.theme = ""
+			localStorage.clear("Theme")
 		}else{
 			console.log("An Error Has Occured")
 		}
@@ -16,14 +17,9 @@ function DarkSwitch(){
 }
 
 function DarkCheck(){
-	if (localStorage.getItem("Theme") == undefined) {
-		window.RootDataSet.theme = "light"
-		localStorage.setItem("Theme", "light")
-		return
-	}
-	if (localStorage.getItem("Theme") == "light"){
-		window.RootDataSet.theme = "light"
-		localStorage.setItem("Theme", "light")
+	if (localStorage.getItem("Theme") == ""){
+		window.RootDataSet.theme = ""
+		localStorage.clear("Theme")
 		return
 	}
 	if (localStorage.getItem("Theme") == "dark"){
