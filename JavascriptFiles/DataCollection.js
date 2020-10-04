@@ -23,5 +23,5 @@ function HideData(){
 function DeleteData(){
 	localStorage.clear()
 	document.getElementById("DataOutput").innerHTML = "<p class='animated'>Your Data has been Deleted!</p>"
-	setTimeout(HideData, 3000)
+	setTimeout(HideData, 5000)
 }
