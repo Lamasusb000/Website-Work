@@ -18,7 +18,7 @@ function DarkSwitch(){
 
 function DarkCheck(){
 	if (localStorage.getItem("Theme") == ""){
-		window.RootDataSet.theme = ""
+		window.RootDataSet.theme = undefined
 		localStorage.clear("Theme")
 		return
 	}
