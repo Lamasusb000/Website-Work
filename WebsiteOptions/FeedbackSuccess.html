@@ -4,21 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="/CSSfiles/AutoCaps.css">
+	<link rel="stylesheet" href="/CSSfiles/CenterPage.css">
 	<link rel="stylesheet" href="/CSSfiles/DarkMode.css">
 	<script src="/JavascriptFiles/DarkMode.js" onload="DarkCheck()"></script>
+	<script src="/JavascriptFiles/ReturnToIndex.js"></script>
 </head>
 <body>
-	<form name="Feedback" method="POST" data-netlify="true" action="/WebsiteOptions/FeedbackSuccess.html">
-		<h3>
-			Name
-		</h3>
-		<input type="text" name="Name">
-		<h3>
-			Feedback
-		</h3>
-		<input type="text" name="Feedback">
-		<br>
-		<input type="submit" value="Submit Feedback">
-	</form>
+	<div class="Caps" onload="ReturnPrime()">
+		<h1>
+			thank you for your feedback!
+		</h1>
+	</div>
 </body>
 </html>
