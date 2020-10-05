@@ -9,15 +9,19 @@ function FindData(){
 	}
 	if (DataCollection.length > 0){
 	document.getElementById("DataOutput").innerHTML = "<p class='animated'>" + DataCollection.join("<br>") + "</p>"
+	document.getElementById("ViewData").setAttribute("value", "Hide Your Data")
+	document.getElementById("ViewData").setAttribute("onclick", "HideData()")
 	}else{
 	document.getElementById("DataOutput").innerHTML = "<p class='animated'>Currently, No Data is Stored in Your Browser</p>"
+	setTimeout(HideData, 2500)
 	}
 	DataCollection = []
-	setTimeout(HideData, 3000)
 }
 
 function HideData(){
 	document.getElementById("DataOutput").innerHTML = "<p class='animated'></p>"
+	document.getElementById("ViewData").setAttribute("value", "View Your Data")
+	document.getElementById("ViewData").setAttribute("onclick", "FindData()")
 }
 
 function DeleteData(){

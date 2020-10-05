@@ -9,7 +9,7 @@ function DarkSwitch(){
 	}else{
 		if (RootDataSet.theme == "dark"){
 			window.RootDataSet.theme = ""
-			localStorage.clear("Theme")
+			localStorage.removeItem("Theme")
 		}else{
 			console.log("An Error Has Occured")
 		}
@@ -19,7 +19,7 @@ function DarkSwitch(){
 function DarkCheck(){
 	if (localStorage.getItem("Theme") == undefined){
 		window.RootDataSet.theme = undefined
-		localStorage.clear("Theme")
+		localStorage.removeItem("Theme")
 		return
 	}
 	if (localStorage.getItem("Theme") == "dark"){
