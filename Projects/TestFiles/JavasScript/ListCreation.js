@@ -1,7 +1,5 @@
 let url = "JSON/data.json"
-let response = ""
-let commits = ""
-
+window.FileOutput = ""
 async function fetchText() {
     let response = await fetch(url);
 
@@ -9,7 +7,17 @@ async function fetchText() {
     console.log(response.statusText); // OK
 
     if (response.status === 200) {
-        let data = await response.text();
-        // handle data
+        let data = await response.json();
+		// handle data
+		window.FileOutput = data
+		Renaming()
     }
+}
+
+fetchText();
+
+function Renaming(){
+	var People = FileOutput.People
+	console.log(People)
+	console.log(People[0].John[0].age)
 }
