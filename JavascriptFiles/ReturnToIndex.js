@@ -1,6 +1,6 @@
 function ReturnIndex(){
-	location.replace = ("https://randomness.link")
+	window.open('https://randomness.link')
 }
 function ReturnPrime(){
-	setTimeout(ReturnIndex, 3500)
+	setTimeout(ReturnIndex, 500)
 }
