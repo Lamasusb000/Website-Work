@@ -2,6 +2,9 @@ input{
 	box-sizing: border-box;
 	text-align: center;
 }
+textarea{
+	box-sizing: border-box;
+}
 input:focus::placeholder{
 	color:transparent
 }
