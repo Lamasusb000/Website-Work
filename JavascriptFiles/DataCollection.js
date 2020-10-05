@@ -19,7 +19,7 @@ function FindData(){
 }
 
 function HideData(){
-	document.getElementById("DataOutput").innerHTML = "<p class='animated'></p>"
+	document.getElementById("DataOutput").innerHTML = "<p class='animated'>View Data Here: <br></p>"
 	document.getElementById("ViewData").setAttribute("value", "View Your Data")
 	document.getElementById("ViewData").setAttribute("onclick", "FindData()")
 }
@@ -27,5 +27,5 @@ function HideData(){
 function DeleteData(){
 	localStorage.clear()
 	document.getElementById("DataOutput").innerHTML = "<p class='animated'>Your Data has been Deleted!</p>"
-	setTimeout(HideData, 5000)
+	setTimeout(HideData, 3000)
 }
