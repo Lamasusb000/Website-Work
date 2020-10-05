@@ -4,7 +4,7 @@
 	--tab-background:#f1f1f1;
 	--tab-hover:#ddd;
 	--tab-active:#ccc;
-	--transition: 0s;
+	--transition: 0.5s;
 }
 [data-theme="light"] {
 	--background-color: rgb(233, 227, 227);

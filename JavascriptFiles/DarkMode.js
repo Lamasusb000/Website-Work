@@ -3,7 +3,7 @@ window.RootDataSet = document.documentElement.dataset
 
 function DarkSwitch(){
 	console.log(RootDataSet.theme)
-	if (RootDataSet.theme == undefined) {
+	if (RootDataSet.theme == "undefined" | RootDataSet.theme == "") {
 		window.RootDataSet.theme = "dark"
 		localStorage.setItem("Theme", "dark")
 	}else{
@@ -17,7 +17,7 @@ function DarkSwitch(){
 }
 
 function DarkCheck(){
-	if (localStorage.getItem("Theme") == ""){
+	if (localStorage.getItem("Theme") == undefined){
 		window.RootDataSet.theme = undefined
 		localStorage.clear("Theme")
 		return

@@ -1,11 +1,11 @@
 function ChangeUsername(){
 	console.log(document.getElementById("Username").value)
 	if (document.getElementById("Username").value == null | document.getElementById("Username").value == "null" | document.getElementById("Username").value == ""){
-		document.getElementById("NameOutput").innerHTML = "<p class='animated'>Click The Button To the Side If You Wish To Delete Your Name<p>"
-		setTimeout(ResetNameOutput, 2500)
+		DeleteUsername()
 	}else{
 		localStorage.setItem("User's Name", document.getElementById("Username").value)
 		document.getElementById("NameOutput").innerHTML = "<p class='animated'>Username Has Been Changed!<p>"
+		document.getElementById("Username").setAttribute("Placeholder", localStorage.getItem("User's Name"))
 		SendToPage()
 	}
 }
@@ -15,17 +15,27 @@ function SendToPage(){
 		return
 	}else{
 		document.getElementById("Welcome").innerHTML = "Welcome " + localStorage.getItem("User's Name") + ", To Junior's Random Project Index"
+		document.getElementById("Username").setAttribute("Placeholder", localStorage.getItem("User's Name"))
 	}
-	setTimeout(ResetNameOutput, 5000)
+	setTimeout(ResetNameOutput, 3500)
 }
 
 function ResetNameOutput(){
 	document.getElementById("NameOutput").innerHTML = "<br>"
 }
 function DeleteUsername(){
-	localStorage.removeItem("User's Name")
-	document.getElementById("NameOutput").innerHTML = "<p class='animated'>Your Username Has Been Deleted!</p>"
-	setTimeout(Reload, 2000)
+	if (localStorage.getItem("User's Name") != undefined){
+		localStorage.removeItem("User's Name")
+		document.getElementById("NameOutput").innerHTML = "<p class='animated'>Your Username Has Been Deleted!</p>"
+		document.getElementById("Username").setAttribute("Placeholder", localStorage.getItem("User's Name"))
+		document.getElementById("Welcome").innerHTML = "Welcome To Junior's Random Project Index"
+		setTimeout(ResetNameOutput, 3500)
+	}else{
+		if (localStorage.getItem("User's Name") == undefined){
+			document.getElementById("NameOutput").innerHTML = "<p class='animated'>Your Name is Currently Not Set. Nothing Could be Deleted.<p>"
+			setTimeout(ResetNameOutput, 3500)
+		}
+	}
 }
 function Reload(){
 	location.reload()
