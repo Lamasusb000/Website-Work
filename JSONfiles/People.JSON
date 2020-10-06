@@ -1,0 +1,26 @@
+[
+	{
+		"Name" : "John",
+		"Age" : 25,
+		"Car" : "Van",
+		"Job" : "Professional Idiot"
+	},
+	{
+		"Name" : "Megan",
+		"Age" : 20,
+		"Car" : "Jeep",
+		"Job" : "Starbucks"
+	},
+	{
+		"Name" : "Chad",
+		"Age" : 18,
+		"Car" : "BMW",
+		"Job" : "Fraternity leader "
+	},
+	{
+		"Name" : "Becca",
+		"Age" : 21,
+		"Car" : "Uber",
+		"Job" : "Non-Profit"
+	}
+]

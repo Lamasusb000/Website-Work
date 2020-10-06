@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="cssfiles/AnimatedText.css">
 	<link rel="stylesheet" href="cssfiles/Index.css">
 	<link rel="stylesheet" href="/CSSfiles/BetterInputs.css">
+	<link rel="stylesheet" href="/CSSfiles/AutoCaps.css">
 	<script src="/JavascriptFiles/DarkMode.js" onload="DarkCheck()" ></script>
 	<script src="JavascriptFiles/TabsScript.js"></script>
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -20,12 +21,14 @@
 	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
+	<div class="Caps">
 	<h1>
 		Central Index
 	</h1>
 	<div class="tab">
 		<button class="tablinks" onclick="OpenMenu(event, 'Menu')" id="defaultOpen">Menu</button>
 		<button class="tablinks" onclick="OpenMenu(event, 'MainProjects')">Main Projects</button>
+		<button class="tablinks" onclick="OpenMenu(event, 'Concepts')">Proof of Concepts</button>
 		<button class="tablinks" onclick="OpenMenu(event, 'RandomProjects')">Random Projects</button>
 		<button class="tablinks" onclick="OpenMenu(event, 'SiteSettings')">Site Settings</button>
 	</div>
@@ -49,14 +52,22 @@
 				JavaScript Based Program to Find Pages to Print For CV, CX, MX Routes For Amazon
 			</ul>
 		</a>
-		<a href="Projects/Timer/Timer.htm" class="NoDecor">
+	</div>
+	<div id="Concepts" class="tabcontent">
+		<a href="/Projects/Concepts/DarkmodeConcept.html">
 			<h2>
-				Timer Page
+				Dark Mode
 			</h2>
 			<ul>
-				A Early Program That Uses Your Devices Current Time to Create a Timer
-				<br>
-				(Mostly Broken Software)
+				Demonstrates Darkmode LocalStorage
+			</ul>
+		</a>
+		<a href="/Projects/Concepts/ListConcept.html">
+			<h2>
+				List From Array
+			</h2>
+			<ul>
+				Demonstrates the creation of lists from arrays
 			</ul>
 		</a>
 	</div>
@@ -72,36 +83,12 @@
 				Link Access To Randomness's Dynmap Page
 			</ul>
 		</a>
-		<a href="projects/Credit Card Payments/CreditCardPage.htm">
-			<h2>
-				Credit Card Payment Calculator
-			</h2>
-			<ul>
-				Calcultor To Calculator Balances After a Single Mass Payment
-			</ul>
-		</a>
-		<a href="projects/Pay Perior Hour Finding/LandingPage.htm">
-			<h2>
-				Pay Period Hour Finding
-			</h2>
-			<ul>
-				Unfinished... I'll get to it eventually
-			</ul>
-		</a>
 		<a href="projects/RandomPages/HTML Practice Document.htm">
 			<h2>
 				HTML Practice Document
 			</h2>
 			<ul>
 				My First HTML Document Where I Show Most Basic HTML Tags
-			</ul>
-		</a>
-		<a href="/Projects/TestFiles/DarkModeConcept.html">
-			<h2>
-				Dark Mode Proof of Concept
-			</h2>
-			<ul>
-				Proof of Concept Page To Show Dark Mode Following Through Pages
 			</ul>
 		</a>
 	</div>
@@ -130,5 +117,6 @@
 		document.getElementById("defaultOpen").click();
 	</script>
 	<script src="/JavascriptFiles/LocalStorageUser.js" onload="SendToPage()"></script>
+	</div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 window.People = ""
-var URL = "/Test/Data.JSON"
+var URL = "/JSONfiles/People.JSON"
 async function fetchText() {
     let response = await fetch(URL);
 
@@ -17,33 +17,27 @@ fetchText();
 
 function Template(People){
 	return`
+		<h3>${People.Name}</h3>
 		<ul>
 			<li>
-				Name:
-				<ul>
-					<li>
-						${People.Name}
-					</li>
-				</ul>
+				<strong>
+					Age: 
+				</strong>
+				${People.Age}
 			</li>
 			<li>
-				Age:
-				<ul>
-					<li>
-						${People.Age}
-					</li>
-				</ul>
+				<strong>
+					Car: 
+				</strong>
+				${People.Car}
 			</li>
 			<li>
-				Car:
-				<ul>
-					<li>
-						${People.Car}
-					</li>
-				</ul>
+				<strong>
+					Job: 
+				</strong>
+				${People.Job}
 			</li>
 		</ul>
-		<br>
 	`
 }
 function Post(){
