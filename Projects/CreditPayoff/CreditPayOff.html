@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/CSSfiles/BetterInputs.css">
+	<link rel="stylesheet" href="/CSSfiles/CenterAligned.css">
+	<link rel="stylesheet" href="/CSSfiles/AutoCaps.css">
+	<link rel="stylesheet" href="/CSSfiles/DarkMode.css">
+	<script src="/JavascriptFiles/DarkMode.js" onload="DarkCheck()" ></script>
+	<script src="/JavascriptFiles/CreditPayoff.js"></script>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+</head>
+<body>
+	<div id="Output">
+		<h3>
+			Total Balance
+		</h3>
+		<input type="number" name="Balance" id="Balance" placeholder="No Dollar Sign">
+		<h3>
+			Interest Rate
+		</h3>
+		<input type="number" name="Rate" id="Rate" placeholder="As Percent (No Decimal)">
+		<h3>
+			Amount Paid Each Month
+		</h3>
+		<input type="number" name="Paid" id="Paid" placeholder="No Dollar Sign">
+		<br><br>
+		<input type="submit" value="Submit" onclick="Getinfo()">
+	</div>
+</body>
+</html>
