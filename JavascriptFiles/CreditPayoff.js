@@ -5,6 +5,12 @@ function Getinfo(){
 	var Rate = document.getElementById("Rate").value / 12
 	var Paid = document.getElementById("Paid").value
 	
+	if(Rate != null){
+		Rate = Rate / 12
+	}else{
+		Rate = 0
+	}
+
 	//Defining Variables
 	var StartBalance = Balance
 	var Leftover = 0
@@ -12,6 +18,8 @@ function Getinfo(){
 	var Output = []
 	var Interest = Rate / 100 + 1
 	var PaidInterest = []
+	var Rounding = 2
+	var DisplayRate = Rate.toFixed(Rounding)
 
 	//Logging for Debugging
 	console.log(`Information is:
@@ -38,7 +46,6 @@ function Getinfo(){
 	}
 
 	//Rounding The Balances Array (Var Determines How Many Decimals)
-	var Rounding = 2
 	Balances = Balances.map(function(elements){
 		return (elements.toFixed(Rounding))
 	})
@@ -81,7 +88,7 @@ function Getinfo(){
 					$${StartBalance}
 				</td>
 				<td>
-					Monthly: ${Rate}%
+					Monthly: ${DisplayRate}%
 				</td>
 	`)
 
@@ -115,10 +122,17 @@ function Getinfo(){
 	
 	//Adding Paid off Count To Output
 	if (Cycles > 0){
-		Output.push(`
+		if(Cycles > 1){
+			Output.push(`
 			<br>
 			Balance Paid off in ${Cycles} Months!
 		`)
+		}else{
+			Output.push(`
+			<br>
+			Balance Paid off in ${Cycles} Month!
+			`)
+		}
 	}
 	//Adding Leftover to Output
 	if (Leftover > 0){
