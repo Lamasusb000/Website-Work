@@ -20,6 +20,7 @@ function Getinfo(){
 	var PaidInterest = []
 	var Rounding = 2
 	var DisplayRate = Rate.toFixed(Rounding)
+	var MaxCycles = 120
 
 	//Logging for Debugging
 	console.log(`Information is:
@@ -43,8 +44,12 @@ function Getinfo(){
 			Balances.push(Balance)
 		}
 		Cycles++
-		if (Cycles > 120){
-			alert("More Than 120 Payments is Not Allowed")
+		if (Cycles > MaxCycles){
+			alert(`
+				More Than ${MaxCycles} Payments Is Not Allowed
+				Increase Payment Amounts
+				Or 
+				Reduce Interest Rate`)
 			return
 		}
 	}
