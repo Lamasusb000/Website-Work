@@ -43,6 +43,10 @@ function Getinfo(){
 			Balances.push(Balance)
 		}
 		Cycles++
+		if (Cycles > 120){
+			alert("More Than 120 Payments is Not Allowed")
+			return
+		}
 	}
 
 	//Rounding The Balances Array (Var Determines How Many Decimals)
