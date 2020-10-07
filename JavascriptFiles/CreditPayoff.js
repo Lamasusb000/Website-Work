@@ -132,8 +132,8 @@ function Getinfo(){
 	PaidInterest = PaidInterest.splice(",").map(Number)
     PaidInterest = PaidInterest.reduce(function(a, b){
         return a + b;
-    }, 0);
-
+	}, 0);
+	PaidInterest = PaidInterest.toFixed(Rounding)
 	Output.push(`
 		<br>
 		Total Interest Paid: $${PaidInterest}
