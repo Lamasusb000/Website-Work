@@ -99,6 +99,7 @@ function Getinfo(){
 				<td>
 					Monthly: ${DisplayRate}%
 				</td>
+			</tr>
 	`)
 
 	//Adding Month Summary To Output

@@ -1,17 +1,12 @@
 :root{
 	--background-color: rgb(233, 227, 227);
 	--text-color: black;
-	--transition: 0s;
-}
-[data-theme="light"] {
-	--background-color: rgb(233, 227, 227);
-	--text-color: black;
-	--transition: 0.5s;
+	--table-border:rgb(153, 146, 146);
 }
 [data-theme="dark"] {
 	--background-color: rgba(24, 21, 21, 0.74);    
 	--text-color:rgb(204, 198, 198);
-	--transition: 0.5s;
+	--table-border:rgba(48, 46, 46, 0.74);
 }
 body {
 	background: var(--background-color);
@@ -20,4 +15,14 @@ body {
 }
 a{
 	color: rgb(43, 164, 204);
+}
+table, td{
+	text-align: center;
+	border: 2px solid var(--table-border);
+	border-collapse: collapse;
+	padding: 15px;
+}
+table.center{
+	margin-left: auto;
+	margin-right: auto;
 }
