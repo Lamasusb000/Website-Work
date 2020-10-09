@@ -2,7 +2,7 @@
 function Getinfo(){
 	//Collection of Info
 	var Balance = document.getElementById("Balance").value
-	var Rate = document.getElementById("Rate").value / 12
+	var Rate = document.getElementById("Rate").value
 	var Paid = document.getElementById("Paid").value
 	
 	if(Rate != null){
