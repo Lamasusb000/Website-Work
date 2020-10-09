@@ -20,7 +20,7 @@ function Getinfo(){
 	var PaidInterest = []
 	var Rounding = 2
 	var DisplayRate = Rate.toFixed(Rounding)
-	var MaxCycles = 120
+	var MaxCycles = 120 //Please Don't move higher than 600
 
 	//Logging for Debugging
 	console.log(`Information is:
