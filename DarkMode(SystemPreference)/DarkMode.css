@@ -1,20 +1,15 @@
-.day   { background: #eee; color: black; }
-.night { background: #333; color: white; }
-
-@media (prefers-color-scheme: dark) {
-  .day.dark-scheme   { background:  #333; color: white; }
-  .night.dark-scheme { background: black; color:  #ddd; }
-}
-
+/* Light mode */
 @media (prefers-color-scheme: light) {
-  .day.light-scheme   { background: white; color:  #555; }
-  .night.light-scheme { background:  #eee; color: black; }
+    html {
+        background: white;
+        color: black;
+    }
 }
 
-.day, .night {
-  display: inline-block;
-  padding: 1em;
-  width: 7em;
-  height: 2em;
-  vertical-align: middle;
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    html {
+        background: black;
+        color: white;
+    }
 }
