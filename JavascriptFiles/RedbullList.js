@@ -62,19 +62,23 @@ function CreateArray(){
 	//Posting Data To Array
 	Output.push(`
 		<fieldset>
-			<strong>${RequestedData[0].Size}ml Torani Bottle</strong>
+			<a href="${RequestedData[0].Link}">
+				<strong>${RequestedData[0].Size}ml ${RequestedData[0].Item}</strong>
+			</a>
 			<br>
 			Cost per Bottle: $${RequestedData[0].Cost}
-			<br>
-			Amount Per fl oz: ${RequestedData[0].ServingML}ml
 			<br><br>
-			Cost Per Redbull Fl oz: $${FlavorPrice}
+			Amount Per Redbull fl oz: ${RequestedData[0].ServingML}ml
+			<br>
+			Cost Per Redbull Fl oz: ~$${FlavorPrice}
 		</fieldset>
 	`)
 	for (let i = 1; i < RequestedData.length; i++) {
 		Output.push(`
 			<fieldset>
-				<strong>${RequestedData[i].Size} Fl oz Redbull Can</strong>
+				<a href="${RequestedData[i].Link}">
+					<strong>${RequestedData[i].Size} Fl oz ${RequestedData[i].Item}</strong>
+				</a>
 				<br>
 				${RequestedData[i].CaseCount} Cans Per Case
 				<br>
@@ -86,7 +90,7 @@ function CreateArray(){
 				Redbull Costs $${CostPerCan[i]}
 				<br>
 				Flavoring Costs: $${FlavoringCost[i]}
-				<br>
+				<br><br>
 				<strong>Final Cost For The ${RequestedData[i].Size} Fl oz Drink is: $${FinalCost[i]}</strong>
 			</Fieldset>
 		`)

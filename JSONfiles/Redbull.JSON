@@ -2,25 +2,29 @@
 	{
 		"Item" : "Torani Bottle",
 		"Size" : 750,
-		"Cost" : 7.99,
-		"ServingML" : 1.25
+		"Cost" : 10.70,
+		"ServingML" : 1.25,
+		"Link" : "https://www.amazon.com/Torani-Syrup-Strawberry-Fluid-Ounce/dp/B008NC7V7C"
 	},
 	{
 		"Item" : "Redbull",
 		"Size" : 8.4,
 		"CaseCount" : 24,
-		"Cost" : 32.99
+		"Cost" : 32.99,
+		"Link" : "https://www.amazon.com/Red-Bull-Energy-Drink-Pack/dp/B000MTST70"
 	},
 	{
 		"Item" : "Redbull",
 		"Size" : 12,
 		"CaseCount" : 24,
-		"Cost" : 47.83
+		"Cost" : 47.83,
+		"Link" : "https://www.amazon.com/Red-Bull-Energy-Drink-Packs/dp/B006MB7LMQ"
 	},
 	{
 		"Item" : "Redbull",
 		"Size" : 16,
 		"CaseCount" : 12,
-		"Cost" : 31.89
+		"Cost" : 31.89,
+		"Link" : "https://www.amazon.com/Red-Bull-Energy-Drink-Pack/dp/B003PFR92E"
 	}
 ]
