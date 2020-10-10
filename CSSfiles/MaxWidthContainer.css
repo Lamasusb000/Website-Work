@@ -1,0 +1,10 @@
+.ContainerCentered{
+	width: fit-content;
+	margin: auto;
+}
+.Container{
+	width: fit-content;
+}
+.MaxWidth{
+	width: 100%;
+}

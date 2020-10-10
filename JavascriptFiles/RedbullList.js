@@ -51,6 +51,9 @@ function CreateArray(){
 	FinalCost = FinalCost.map(function(elements){
 		return (elements.toFixed(Rounding))
 	})
+	FlavoringCost = FlavoringCost.map(function(elements){
+		return (elements.toFixed(Rounding))
+	})
 	for (let i = 0; i < RequestedData.length; i++) {
 		RequestedData[i].Cost = RequestedData[i].Cost.toFixed(Rounding)
 	}
@@ -76,10 +79,15 @@ function CreateArray(){
 				${RequestedData[i].CaseCount} Cans Per Case
 				<br>
 				Costs $${RequestedData[i].Cost} Per Case
+				Costs $${CostPerCan[i]}
 				<br><br>
-				Costs $${CostPerOz[i]} Per fl oz/ $${CostPerCan[i]} Per Can
+				Final Costs
 				<br>
-				Final Cost For The Drink is: $${FinalCost[i]}
+				Redbull Costs $${CostPerCan[i]}
+				<br>
+				Flavoring Costs: $${FlavoringCost[i]}
+				<br>
+				<strong>Final Cost For The ${RequestedData[i].Size} Fl oz Drink is: $${FinalCost[i]}</strong>
 			</Fieldset>
 		`)
 	}

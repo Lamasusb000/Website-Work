@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="cssfiles/AnimatedText.css">
 	<link rel="stylesheet" href="cssfiles/Index.css">
 	<link rel="stylesheet" href="/CSSfiles/BetterInputs.css">
+	<link rel="stylesheet" href="/CSSfiles/MaxWidthContainer.css">
 	<link rel="stylesheet" href="/CSSfiles/AutoCaps.css">
 	<script src="/JavascriptFiles/DarkMode.js" onload="DarkCheck()" ></script>
 	<script src="JavascriptFiles/TabsScript.js"></script>
@@ -112,12 +113,14 @@
 		<h1>
 			Change Name
 		</h1>
-		<input type="text" name="Username" id="Username">
-		<br>
-		<input type="button" value="Change Username" onclick="ChangeUsername()">
-		<br>
-		<input type="button" value="Delete Username" onclick="DeleteUsername()">
-		<p id="NameOutput"><br></p>
+		<div class="Container">
+			<input type="text" name="Username" id="Username" class="MaxWidth">
+			<br>
+			<input type="button" value="Change Username" onclick="ChangeUsername()" class="MaxWidth">
+			<br>
+			<input type="button" value="Delete Username" onclick="DeleteUsername()" class="MaxWidth">
+			<p id="NameOutput"><br></p>
+		</div>
 		<h1>
 			Dark Mode Toggle
 		</h1>
