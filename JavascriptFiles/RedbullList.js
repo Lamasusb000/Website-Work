@@ -29,6 +29,7 @@ function CreateArray(){
 	//Math For The Cans
 	var FlavorPrice = RequestedData[0].Cost / RequestedData[0].Count / RequestedData[0].Size
 	var FlavoringCost = []
+	var BottleCost = RequestedData[0].Cost / RequestedData[0].Count
 	for (let i = 1; i < RequestedData.length; i++){
 		FlavoringCost[i] = RequestedData[i].Size * FlavorPrice
 	}
@@ -58,41 +59,60 @@ function CreateArray(){
 		RequestedData[i].Cost = RequestedData[i].Cost.toFixed(Rounding)
 	}
 	FlavorPrice = (+FlavorPrice).toFixed(Rounding)
+	BottleCost = BottleCost.toFixed(Rounding)
 
 	//Posting Data To Array
-	Output.push(`
+	if (RequestedData[0].Count > 1){
+		Output.push(`
 		<fieldset>
 			<a href="${RequestedData[0].Link}">
-				<strong>${RequestedData[0].Size}ml ${RequestedData[0].Item}</strong>
+				<strong>${RequestedData[0].Size}ml ${RequestedData[0].Item} ${RequestedData[0].Count} Pack</strong>
 			</a>
 			<br>
-			Cost per Bottle: $${RequestedData[0].Cost}
+			Bundle Cost: $${RequestedData[0].Cost}
+			<br>
+			Cost per Bottle: $${BottleCost}
 			<br><br>
 			Amount Per Redbull fl oz: ${RequestedData[0].ServingML}ml
 			<br>
 			Cost Per Redbull Fl oz: ~$${FlavorPrice}
 		</fieldset>
 	`)
+	}else{
+		Output.push(`
+		<fieldset>
+			<a href="${RequestedData[0].Link}">
+				<strong>${RequestedData[0].Size}ml ${RequestedData[0].Item}</strong>
+			</a>
+			<br>
+			Cost of Bottle: $${BottleCost}
+			<br><br>
+			Amount Per Redbull fl oz: ${RequestedData[0].ServingML}ml
+			<br>
+			Cost Per Redbull Fl oz: ~$${FlavorPrice}
+		</fieldset>
+	`)
+	}
 	for (let i = 1; i < RequestedData.length; i++) {
 		Output.push(`
-			<fieldset>
-				<a href="${RequestedData[i].Link}">
-					<strong>${RequestedData[i].Size} Fl oz ${RequestedData[i].Item}</strong>
-				</a>
-				<br>
-				${RequestedData[i].Count} Cans Per Case
-				<br>
-				Costs $${RequestedData[i].Cost} Per Case
-				<br><br>
-				Final Costs
-				<br>
-				Redbull Costs $${CostPerCan[i]} Per Can
-				<br>
-				Flavoring Costs: $${FlavoringCost[i]}
-				<br><br>
-				<strong>Final Cost For The ${RequestedData[i].Size} Fl oz Drink is: $${FinalCost[i]}</strong>
-			</Fieldset>
-		`)
+		<fieldset>
+			<a href="${RequestedData[i].Link}">
+				<strong>${RequestedData[i].Size} Fl oz ${RequestedData[i].Item}</strong>
+			</a>
+			<br>
+			${RequestedData[i].Count} Cans Per Case
+			<br>
+			Costs $${RequestedData[i].Cost} Per Case
+			<br><br>
+			Final Costs
+			<br>
+			Redbull Costs $${CostPerCan[i]} Per Can
+			<br>
+			Flavoring Costs: $${FlavoringCost[i]}
+			<br><br>
+			<strong>Final Cost For The ${RequestedData[i].Size} Fl oz Drink is: $${FinalCost[i]}</strong>
+		</Fieldset>
+	`)
 	}
 
 	//Posting Array To Page
