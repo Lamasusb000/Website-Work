@@ -27,19 +27,19 @@ FetchData()
 //Creation and Posting of The Array
 function CreateArray(){
 	//Math For The Cans
-	var FlavorPrice = [RequestedData[0].Cost / RequestedData[0].Size]
+	var FlavorPrice = RequestedData[0].Cost / RequestedData[0].Count / RequestedData[0].Size
 	var FlavoringCost = []
 	for (let i = 1; i < RequestedData.length; i++){
 		FlavoringCost[i] = RequestedData[i].Size * FlavorPrice
 	}
 	for (let i = 1; i < RequestedData.length; i++){
-		CostPerOz[i] = RequestedData[i].Cost / RequestedData[i].CaseCount / RequestedData[i].Size
+		CostPerOz[i] = RequestedData[i].Cost / RequestedData[i].Count / RequestedData[i].Size
 	}
 	for (let i = 1; i < RequestedData.length; i++){
-		CostPerCan[i] = RequestedData[i].Cost / RequestedData[i].CaseCount
+		CostPerCan[i] = RequestedData[i].Cost / RequestedData[i].Count
 	}
 	for (let i = 1; i < RequestedData.length; i++){
-		FinalCost[i] = RequestedData[i].Cost / RequestedData[i].CaseCount + FlavoringCost[i]
+		FinalCost[i] = RequestedData[i].Cost / RequestedData[i].Count + FlavoringCost[i]
 	}
 	//Rounding of Numbers
 	CostPerOz = CostPerOz.map(function(elements){
@@ -80,7 +80,7 @@ function CreateArray(){
 					<strong>${RequestedData[i].Size} Fl oz ${RequestedData[i].Item}</strong>
 				</a>
 				<br>
-				${RequestedData[i].CaseCount} Cans Per Case
+				${RequestedData[i].Count} Cans Per Case
 				<br>
 				Costs $${RequestedData[i].Cost} Per Case
 				<br><br>
