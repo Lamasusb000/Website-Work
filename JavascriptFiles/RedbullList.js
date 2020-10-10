@@ -83,11 +83,10 @@ function CreateArray(){
 				${RequestedData[i].CaseCount} Cans Per Case
 				<br>
 				Costs $${RequestedData[i].Cost} Per Case
-				Costs $${CostPerCan[i]}
 				<br><br>
 				Final Costs
 				<br>
-				Redbull Costs $${CostPerCan[i]}
+				Redbull Costs $${CostPerCan[i]} Per Can
 				<br>
 				Flavoring Costs: $${FlavoringCost[i]}
 				<br><br>
