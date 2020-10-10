@@ -1,0 +1,22 @@
+[
+	{
+		"Size" : 750,
+		"Cost" : 7.99,
+		"ServingML" : 1.25
+	},
+	{
+		"Size" : 8.4,
+		"CaseCount" : 24,
+		"Cost" : 32.99
+	},
+	{
+		"Size" : 12,
+		"CaseCount" : 24,
+		"Cost" : 47.83
+	},
+	{
+		"Size" : 16,
+		"CaseCount" : 12,
+		"Cost" : 31.89
+	}
+]
