@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="/CSSfiles/AutoCaps.css">
 	<script src="/JavascriptFiles/DarkMode.js" onload="DarkCheck()" ></script>
 	<script src="JavascriptFiles/TabsScript.js"></script>
+	<script src="/JavascriptFiles/Index.js"></script>
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -20,6 +21,9 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#2b5797">
 	<meta name="theme-color" content="#ffffff">
+
+
+
 </head>
 <body>
 	<h1>
@@ -27,9 +31,9 @@
 	</h1>
 	<div class="tab">
 		<button class="tablinks" onclick="OpenMenu(event, 'Menu')" id="defaultOpen">Menu</button>
-		<button class="tablinks" onclick="OpenMenu(event, 'MainProjects')">Main Projects</button>
+		<button class="tablinks" onclick="OpenMenu(event, 'Main')">Main Projects</button>
 		<button class="tablinks" onclick="OpenMenu(event, 'Concepts')">Proof of Concepts</button>
-		<button class="tablinks" onclick="OpenMenu(event, 'RandomProjects')">Random Projects</button>
+		<button class="tablinks" onclick="OpenMenu(event, 'Random')">Random Projects</button>
 		<button class="tablinks" onclick="OpenMenu(event, 'SiteSettings')">Site Settings</button>
 	</div>
 	<div id="Menu" class="tabcontent">
@@ -40,73 +44,19 @@
 			This is Barebones Website To Allow Quick Navigation of Random Projects
 		</p>
 	</div>
-	<div id="MainProjects" class="tabcontent">
-		<h1>
-			Link Access For The Main Projects
-		</h1>
-		<a href="Projects/PagePrinter/Display.html" class="NoDecor">
-			<h2>
-				Page Printer
-			</h2>
-			<ul>
-				JavaScript Based Program to Find Pages to Print For CV, CX, MX Routes For Amazon
-			</ul>
-		</a>
-		<a href="/Projects/CreditPayoff/CreditPayOff.html">
-			<h2>
-				Credit Payoff
-			</h2>
-			<ul>
-				Credit Card/ Loan Payoff calculator with interest
-			</ul>
-		</a>
+	<div id="Main" class="tabcontent">
+
+
+
 	</div>
 	<div id="Concepts" class="tabcontent">
-		<a href="/Projects/Concepts/DarkmodeConcept.html">
-			<h2>
-				Dark Mode
-			</h2>
-			<ul>
-				Demonstrates Darkmode LocalStorage
-			</ul>
-		</a>
-		<a href="/Projects/Concepts/ListConcept.html">
-			<h2>
-				List From Array
-			</h2>
-			<ul>
-				Demonstrates the creation of lists from arrays
-			</ul>
-		</a>
+
+
+
 	</div>
-	<div id="RandomProjects" class="tabcontent">
-		<h1>
-			Link Access For The Random Projects
-		</h1>
-		<a href="projects/RandomPages/Minecraft/Dynamap.html">
-			<h2>
-				Dynmap
-			</h2>
-			<ul>
-				Link Access To Randomness's Dynmap Page
-			</ul>
-		</a>
-		<a href="projects/RandomPages/HTML Practice Document.htm">
-			<h2>
-				HTML Practice Document
-			</h2>
-			<ul>
-				My First HTML Document Where I Show Most Basic HTML Tags
-			</ul>
-		</a>
-		<a href="/Projects/RandomPages/RedbullCalculator.html">
-			<h2>
-				Redbull Calculator
-			</h2>
-			<ul>
-				Page That Shows Cost of making Redbull yourself
-			</ul>
-		</a>
+	<div id="Random" class="tabcontent">
+
+
 
 	</div>
 	<div id="SiteSettings" class="tabcontent">

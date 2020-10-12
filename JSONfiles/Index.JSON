@@ -1,0 +1,49 @@
+[
+	{
+		"Main" : [
+			{
+				"Title" : "Page Printer",
+				"Description" : "JavaScript Based Program to Find Pages to Print For CV, CX, MX Routes For Amazon",
+				"Link" : "/Projects/PagePrinter/display.html"
+			},
+			{
+				"Title" : "Credit Payoff",
+				"Description" : "Credit Card/ Loan Payoff Calculator",
+				"Link" : "/Projects/CreditPayoff/CreditPayOff.html"
+			}
+		]
+	},
+	{
+		"Concepts" : [
+			{
+				"Title" : "Dark Mode",
+				"Description" : "Demonstrates Dark Mode Localstorage",
+				"Link" : "/Projects/Concepts/DarkmodeConcept.html"
+			},
+			{
+				"Title" : "List From Array",
+				"Description" : "Demonstrates The Creation of Lists From Arrays",
+				"Link" : "/Projects/Concepts/ListConcept.html"
+			}
+		]
+	},
+	{
+		"Random" : [
+			{
+				"Title" : "Dynmap",
+				"Description" : "Link Access To Randomness's Dynmap Page",
+				"Link" : "/Projects/Randompages/Minecraft/Dynmap.html"
+			},
+			{
+				"Title" : "HTML Practice Document",
+				"Description" : "My First HTML Document Demonstrating All The HTML Tags I knew",
+				"Link" : "/Projects/Randompages/HTML Practice Document.html"
+			},
+			{
+				"Title" : "Redbull Calculator",
+				"Description" : "Pages That Shows Cost of Making Flavored Redbull Drinks Yourself",
+				"Link" : "/Projects/Randompages/RedbullCalculator.html"
+			}
+		]
+	}
+]
