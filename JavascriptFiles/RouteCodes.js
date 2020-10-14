@@ -32,7 +32,7 @@ function DataMod(){
 	window.ErrorRouteCodesCount = 0
 	for (var i = 0; i < SortedRoutes.length; i++) {
 		var RouteCode = SortedRoutes[i].slice(0, 2)
-		var RouteNumber = SortedRoutes[i].slice(2)
+		var RouteNumber = + SortedRoutes[i].slice(2)
 		console.log(SortedRoutes[i] + " - " + RouteCode + " " + RouteNumber)
 		if (RouteCode == "CV"){
 			if (Number.isInteger(RouteNumber) == false){
