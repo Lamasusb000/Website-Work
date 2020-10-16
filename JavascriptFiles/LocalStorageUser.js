@@ -6,6 +6,7 @@ function ChangeUsername(){
 		localStorage.setItem("User's Name", document.getElementById("Username").value)
 		document.getElementById("NameOutput").innerHTML = "<p class='animated'>Username Has Been Changed!<p>"
 		document.getElementById("Username").setAttribute("Placeholder", localStorage.getItem("User's Name"))
+		document.getElementById("Username").value = ""
 		SendToPage()
 	}
 }
@@ -27,7 +28,8 @@ function DeleteUsername(){
 	if (localStorage.getItem("User's Name") != undefined){
 		localStorage.removeItem("User's Name")
 		document.getElementById("NameOutput").innerHTML = "<p class='animated'>Your Username Has Been Deleted!</p>"
-		document.getElementById("Username").setAttribute("Placeholder", localStorage.getItem("User's Name"))
+		document.getElementById("Username").value = ""
+		document.getElementById("Username").setAttribute("Placeholder", "No Name Created")
 		document.getElementById("Welcome").innerHTML = "Welcome To Junior's Random Project Index"
 		setTimeout(ResetNameOutput, 3500)
 	}else{
