@@ -58,10 +58,6 @@ function CreateArray(){
 	MainContentPost = MainContentPost.join("")
 	ConceptsContentPost = ConceptsContentPost.join("")
 	RandomContentPost = RandomContentPost.join("")
-	console.log(`
-	${MainContentPost}
-	${ConceptsContentPost}
-	`)
 	document.getElementById("Main").innerHTML = MainContentPost
 	document.getElementById("Concepts").innerHTML = ConceptsContentPost
 	document.getElementById("Random").innerHTML = RandomContentPost
