@@ -1,0 +1,50 @@
+[
+	{
+		"Color" : "Black",
+		"Link" : "/Photos/AmongUs/Black.png"
+	},
+	{
+		"Color" : "Blue",
+		"Link" : "/Photos/AmongUs/Blue.png"
+	},
+	{
+		"Color" : "Brown",
+		"Link" : "/Photos/AmongUs/Brown.png"
+	},
+	{
+		"Color" : "Cyan",
+		"Link" : "/Photos/AmongUs/Cyan.png"
+	},
+	{
+		"Color" : "Green",
+		"Link" : "/Photos/AmongUs/Green.png"
+	},
+	{
+		"Color" : "Lime",
+		"Link" : "/Photos/AmongUs/Lime.png"
+	},
+	{
+		"Color" : "Orange",
+		"Link" : "/Photos/AmongUs/Orange.png"
+	},
+	{
+		"Color" : "Pink",
+		"Link" : "/Photos/AmongUs/Pink.png"
+	},
+	{
+		"Color" : "Purple",
+		"Link" : "/Photos/AmongUs/Purple.png"
+	},
+	{
+		"Color" : "Red",
+		"Link" : "/Photos/AmongUs/Red.png"
+	},
+	{
+		"Color" : "White",
+		"Link" : "/Photos/AmongUs/White.png"
+	},
+	{
+		"Color" : "Yellow",
+		"Link" : "/Photos/AmongUs/Yellow.png"
+	}
+]
