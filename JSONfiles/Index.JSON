@@ -43,6 +43,11 @@
 				"Title" : "Redbull Calculator",
 				"Description" : "Pages That Shows Cost of Making Flavored Redbull Drinks Yourself",
 				"Link" : "/Projects/Randompages/RedbullCalculator.html"
+			},
+			{
+				"Title" : "Imposter Predictor",
+				"Description" : "A Percentage based predictor on who is the imposter in the game 'Among Us'",
+				"Link" : "/Projects/Randompages/AmongUs.html"
 			}
 		]
 	}
