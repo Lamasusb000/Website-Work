@@ -56,12 +56,12 @@ function CreateTiles(){
 	document.getElementById("Container").setAttribute("Class", "Container")
 	for (let i = 0; i < SelectedColors.length; i++) {
 		Tiles.push(`
-		<button onclick="Check(${i})" id="${i}Tile">
+		<button onclick="Check(${TileArray[i]})" id="${TileArray[i]}Tile">
 		<div class="Tile">
 			<h1>
 				${RequestedData[SelectedColors[i]].Color}
 			</h1>
-			<p id="${i}Percent">
+			<p id="${TileArray[i]}Percent">
 				Chance of Being Imposter ${ImposterChance}%
 			</p>
 			<img src="${RequestedData[SelectedColors[i]].Link}">
@@ -77,7 +77,7 @@ function Check(TileNumber){
 	SelectedTile = document.getElementById(`${TileNumber}Tile`)
 	SelectedTile.remove()
 	--TileCount
-	delete TileArray[TileNumber]
+	delete TileArray[TileArray.indexOf(TileNumber)]
 	TileList = TileArray.filter(function(element){
 		return element !== undefined
 	})
