@@ -107,12 +107,20 @@ function DarkSwitch(){
 	var User = netlifyIdentity.currentUser()
 	if (RootDataSet.theme == "Light" | RootDataSet.theme == "" | RootDataSet.theme == undefined){
 		window.RootDataSet.theme = "Dark"
-		SDF()
+		netlifyIdentity.gotrue.currentUser().update({
+			data: {
+				Theme: "Dark"
+			}
+		})
 		return
 	}
 	if (RootDataSet.theme == "Dark"){
 		window.RootDataSet.theme = "Light"
-		SLF()
+		netlifyIdentity.gotrue.currentUser().update({
+			data: {
+				Theme: "Light"
+			}
+		})
 		return
 	}
 	console.log("Could Not Change Colors")
