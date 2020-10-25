@@ -61,8 +61,6 @@ var Day = ""
 NewTime = []
 
 function SetEasyDate(){
-
-
 	UglyTime = user.confirmed_at
 	var Year = ""
 	var Month = ""
@@ -84,9 +82,21 @@ window.RootDataSet = document.documentElement.dataset
 function DarkCheck(){
 	console.log(RootDataSet.theme)
 	var User = netlifyIdentity.currentUser()
-	Theme = user.user_metadata.Theme
+	Theme = User.user_metadata.Theme
+	console.log(Theme)
+	if(Theme){
+
+	}
 }
 
+function DarkSwitch(){
+	console.log("Not Implemented Yet!")
+}
+
+
+
+
+//testing commands
 function SDF(){
 	netlifyIdentity.gotrue.currentUser().update({
 		data: {
