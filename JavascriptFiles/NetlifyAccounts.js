@@ -39,14 +39,14 @@ function SetPage(){
 	<p>This is Barebones Website To Allow Quick Navigation of Random Projects</p>
 	`
 	document.getElementById("Login").innerHTML = `
-	<h1>Account</h1>
+	<h1>Account (Beta: Account Changes Are Not Live Feeds)</h1>
+	<p>Previous Sessions Take Effect Upon Logging in</p>
+	<p>Sign Out and Back in To Request Changes. (</p>
 	<input type="button" onclick="NetlifyLogout()" value="Logout">
 	`
 }
 function NetlifyLogout(){
-	//Firefox Issue Prevention By Placing The Close Command
-	netlifyIdentity.open()
-	netlifyIdentity.close()
+	//Does Not work With Firefox!!!!
 	netlifyIdentity.logout()
 	location.reload()
 }
