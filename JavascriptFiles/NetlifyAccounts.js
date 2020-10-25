@@ -37,6 +37,7 @@ function SetPage(){
 	<p>This is Barebones Website To Allow Quick Navigation of Random Projects</p>
 	`
 	document.getElementById("Login").innerHTML = `
+	<h1>Account</h1>
 	<input type="button" onclick="NetlifyLogout()" value="Logout">
 	`
 }
