@@ -92,7 +92,7 @@ function DarkCheck(){
 		window.RootDataSet.theme = "dark"
 		return
 	}
-	if(Theme == undefined){
+	if(Theme == undefined | Theme == ""){
 		window.RootDataSet.theme = "light"
 		netlifyIdentity.gotrue.currentUser().update({
 			data: {
