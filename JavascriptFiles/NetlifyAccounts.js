@@ -98,17 +98,25 @@ function DarkCheck(){
 			data: {
 				Theme: "Light"
 			}
-		}).then(user => console.log(user))
+		})
 		return
 	}
 }
 
 function DarkSwitch(){
-	console.log("Not Implemented Yet!")
+	var User = netlifyIdentity.currentUser()
+	if (RootDataSet.theme == "Light"){
+		window.RootDataSet = "Dark"
+		SDF()
+		return
+	}
+	if (RootDataSet.theme == "Dark"){
+		window.RootDataSet = "Light"
+		SLF()
+		return
+	}
+	console.log("Could Not Change Colors")
 }
-
-
-
 
 //testing commands
 function SDF(){
