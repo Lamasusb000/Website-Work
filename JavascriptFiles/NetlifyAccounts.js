@@ -87,10 +87,10 @@ function DarkCheck(){
 	Theme = user.user_metadata.Theme
 }
 
-function DarkFunction(){
+function SDF(){
 	netlifyIdentity.gotrue.currentUser().update({
 		data: {
 			Theme: "Dark"
 		}
-	}).then(user => console.log(user))
+	})
 }
