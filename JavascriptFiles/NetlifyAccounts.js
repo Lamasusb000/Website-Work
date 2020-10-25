@@ -34,7 +34,9 @@ function SetPage(){
 	document.getElementById("Menu").innerHTML = `
 	<h1>Welcome ${username}! To Junior's Random Project Index</h1>
 	<p>Member Since <strong>${NewTime}</strong></p>
-	<br>
+	<p>This is Barebones Website To Allow Quick Navigation of Random Projects</p>
+	`
+	document.getElementById("Login").innerHTML = `
 	<input type="button" onclick="NetlifyLogout()" value="Logout">
 	`
 }
