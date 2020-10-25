@@ -94,3 +94,10 @@ function SDF(){
 		}
 	})
 }
+function SLF(){
+	netlifyIdentity.gotrue.currentUser().update({
+		data: {
+			Theme: "Dark"
+		}
+	})
+}
