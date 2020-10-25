@@ -44,6 +44,9 @@ function SetPage(){
 	`
 }
 function NetlifyLogout(){
+	//Firefox Issue Prevention By Placing The Close Command
+	netlifyIdentity.open()
+	netlifyIdentity.close()
 	netlifyIdentity.logout()
 	location.reload()
 }
