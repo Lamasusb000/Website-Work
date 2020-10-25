@@ -106,12 +106,12 @@ function DarkCheck(){
 function DarkSwitch(){
 	var User = netlifyIdentity.currentUser()
 	if (RootDataSet.theme == "Light" | RootDataSet.theme == "" | RootDataSet.theme == undefined){
-		window.RootDataSet = "Dark"
+		window.RootDataSet.theme = "Dark"
 		SDF()
 		return
 	}
 	if (RootDataSet.theme == "Dark"){
-		window.RootDataSet = "Light"
+		window.RootDataSet.theme = "Light"
 		SLF()
 		return
 	}
