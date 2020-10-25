@@ -33,7 +33,7 @@ function SetPage(){
 	const username = user.user_metadata.full_name
 	document.getElementById("Menu").innerHTML = `
 	<h1>Welcome ${username}! To Junior's Random Project Index</h1>
-	<p>Member Since <strong>${NewTime}</strong></p>
+	<p>You've been a Member Since <strong>${NewTime}!</strong></p>
 	<p>This is Barebones Website To Allow Quick Navigation of Random Projects</p>
 	`
 	document.getElementById("Login").innerHTML = `
