@@ -13,6 +13,7 @@ function DetectUser(){
 	}else{
 		console.log("User Found! - " + user.user_metadata.full_name)
 		SetEasyDate()
+		DarkCheck()
 		SetPage()
 	}
 }
@@ -24,6 +25,7 @@ function SortUser(){
 	}else{
 		console.log("User Found! - " + user.user_metadata.full_name)
 		SetEasyDate()
+		DarkCheck()
 		SetPage()
 	}
 }
