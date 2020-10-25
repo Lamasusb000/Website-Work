@@ -14,6 +14,8 @@
 	<script src="/JavascriptFiles/DarkMode.js" onload="DarkCheck()" ></script>
 	<script src="JavascriptFiles/TabsScript.js"></script>
 	<script src="/JavascriptFiles/Index.js"></script>
+	<script src="/JavascriptFiles/NetlifyAccounts.js"></script>
+	<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,6 +62,10 @@
 
 	</div>
 	<div id="SiteSettings" class="tabcontent">
+		<h1 onclick="netlifyIdentity.open('login')">
+			Click To Login
+		</h1>
+		<!--
 		<h1>
 			Change Name
 		</h1>
@@ -71,6 +77,7 @@
 			<input type="button" value="Delete Username" onclick="DeleteUsername()" class="MaxWidth">
 		</div>
 			<p id="NameOutput"><br></p>
+		-->
 		<h1>
 			Dark Mode Toggle
 		</h1>
@@ -85,6 +92,6 @@
 	<script>
 		document.getElementById("defaultOpen").click();
 	</script>
-	<script src="/JavascriptFiles/LocalStorageUser.js" onload="SendToPage()"></script>
+	<!--<script src="/JavascriptFiles/LocalStorageUser.js" onload="SendToPage()"></script>-->
 </body>
 </html>
