@@ -82,10 +82,8 @@ function SetEasyDate(){
 window.RootDataSet = document.documentElement.dataset
 
 function DarkCheck(){
-	console.log(RootDataSet.theme)
 	var User = netlifyIdentity.currentUser()
 	Theme = User.user_metadata.Theme
-	console.log(Theme)
 	if(Theme == "Light"){
 		window.RootDataSet.theme = "light"
 		return
@@ -96,7 +94,12 @@ function DarkCheck(){
 	}
 	if(Theme == undefined){
 		window.RootDataSet.theme = "light"
-		SLF()
+		netlifyIdentity.gotrue.currentUser().update({
+			data: {
+				Theme: "Light"
+			}
+		}).then(user => console.log(user))
+		return
 	}
 }
 
@@ -119,6 +122,13 @@ function SLF(){
 	netlifyIdentity.gotrue.currentUser().update({
 		data: {
 			Theme: "Light"
+		}
+	}).then(user => console.log(user))
+}
+function STDF(){
+	netlifyIdentity.gotrue.currentUser().update({
+		data: {
+			Theme: ""
 		}
 	}).then(user => console.log(user))
 }
