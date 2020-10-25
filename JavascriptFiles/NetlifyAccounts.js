@@ -8,8 +8,8 @@ function StartPage(){
 function DetectUser(){
 	user = netlifyIdentity.currentUser()
 	if (user == undefined) {
-		console.log("No User Detected. Checking again in 350ms")
-		setTimeout(SortUser, 350)
+		console.log("No User Detected. Checking again in 400ms")
+		setTimeout(SortUser, 400)
 	}else{
 		console.log("User Found! - " + user.user_metadata.full_name)
 		SetEasyDate()
