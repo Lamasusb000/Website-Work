@@ -86,8 +86,17 @@ function DarkCheck(){
 	var User = netlifyIdentity.currentUser()
 	Theme = User.user_metadata.Theme
 	console.log(Theme)
-	if(Theme){
-
+	if(Theme == "Light"){
+		window.RootDataSet.theme = "light"
+		return
+	}
+	if(Theme == "Dark"){
+		window.RootDataSet.theme = "dark"
+		return
+	}
+	if(Theme == undefined){
+		window.RootDataSet.theme = "light"
+		SLF()
 	}
 }
 
