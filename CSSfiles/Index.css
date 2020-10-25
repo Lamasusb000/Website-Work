@@ -6,7 +6,7 @@
 	--tab-active:#ccc;
 	--transition: 0.5s;
 }
-[data-theme="light"] {
+[data-theme="Light"] {
 	--background-color: rgb(233, 227, 227);
 	--text-color: black;
 	--tab-background:#f1f1f1;
@@ -14,7 +14,7 @@
 	--tab-active:#ccc;
 	--transition: 0.5s;
 }
-[data-theme="dark"] {
+[data-theme="Dark"] {
 	--background-color: rgba(24, 21, 21, 0.74);    
 	--text-color:rgb(204, 198, 198);
 	--tab-background:rgba(104, 101, 101, 0.74);
