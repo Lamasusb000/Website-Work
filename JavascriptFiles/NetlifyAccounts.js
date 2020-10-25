@@ -32,8 +32,9 @@ function SetPage(){
 	console.log(user)
 	const username = user.user_metadata.full_name
 	document.getElementById("Welcome").innerHTML = `
-	<h1>Welcome ${username}! To Junior's Random Project Index</h1>
-	<p>Member Since <strong>${NewTime}</strong></p>
+	Welcome ${username}! To Junior's Random Project Index
+	<br>
+	Member Since <strong>${NewTime}</strong>
 	<br>
 	<input type="button" onclick="NetlifyLogout()" value="Logout">
 	`
