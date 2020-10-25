@@ -39,9 +39,9 @@ function SetPage(){
 	<p>This is Barebones Website To Allow Quick Navigation of Random Projects</p>
 	`
 	document.getElementById("Login").innerHTML = `
-	<h1>Account (Beta: Account Changes Are Not Live Feeds)</h1>
+	<span><h1>Account</h1><p>Beta: Changes are Not Life fed</p></span>
 	<p>Previous Sessions Take Effect Upon Logging in</p>
-	<p>Sign Out and Back in To Request Changes. (</p>
+	<p>lotout and Back in To Request Changes.</p>
 	<input type="button" onclick="NetlifyLogout()" value="Logout">
 	`
 }
