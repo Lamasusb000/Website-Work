@@ -49,7 +49,7 @@ function NetlifyLogout(){
 function SecretFunction(){
 	netlifyIdentity.gotrue.currentUser().update({
 		data: {
-			
+			SecretFunction: "You Found The Secret Function"
 		}
 	}).then(user => console.log(user))
 }
@@ -77,4 +77,20 @@ function SetEasyDate(){
 	NewTime.push(Year)
 	//creation of new time
 	NewTime = NewTime.join("/")
+}
+
+window.RootDataSet = document.documentElement.dataset
+
+function DarkCheck(){
+	console.log(RootDataSet.theme)
+	var User = netlifyIdentity.currentUser()
+	Theme = user.user_metadata.Theme
+}
+
+function DarkFunction(){
+	netlifyIdentity.gotrue.currentUser().update({
+		data: {
+			Theme: "Dark"
+		}
+	}).then(user => console.log(user))
 }
