@@ -92,12 +92,12 @@ function SDF(){
 		data: {
 			Theme: "Dark"
 		}
-	})
+	}).then(user => console.log(user))
 }
 function SLF(){
 	netlifyIdentity.gotrue.currentUser().update({
 		data: {
-			Theme: "Dark"
+			Theme: "Light"
 		}
-	})
+	}).then(user => console.log(user))
 }
