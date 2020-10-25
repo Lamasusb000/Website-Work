@@ -40,7 +40,7 @@ function SetPage(){
 	`
 	document.getElementById("Login").innerHTML = `
 	<h1 class="span">Account</h1>
-	<p class="span">(Beta Feature: Changes are Not Life fed)</p>
+	<p class="span">(Beta Feature)</p>
 	<p>Previous Sessions Take Effect Upon Logging in</p>
 	<p>logout and Back in To Request Changes.</p>
 	<input type="button" onclick="NetlifyLogout()" value="Logout">
