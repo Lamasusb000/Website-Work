@@ -88,7 +88,8 @@ function SetEasyDate(){
 function SetFirstName(){
 	var User = netlifyIdentity.currentUser()
 	console.log(User)
-	var NameArray = User.full_name.split(" ")
+	var NameArray = User.full_name
+	NameArray = NameArray.split(" ")
 	console.log(NameArray)
 }
 
