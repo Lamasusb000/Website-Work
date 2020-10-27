@@ -1,5 +1,7 @@
 var user = ""
 var UglyTime = ""
+var FirstName = ""
+
 function StartPage(){
 	console.log("Starting Functions")
 	netlifyIdentity.on('init', user => DetectUser())
@@ -36,7 +38,7 @@ function SetPage(){
 	console.log(user)
 	const username = user.user_metadata.full_name
 	document.getElementById("Menu").innerHTML = `
-	<h1>Welcome ${username}! To Junior's Random Project Index</h1>
+	<h1>Welcome ${FirstName}! To Junior's Random Project Index</h1>
 	<p>You've been a Member Since <strong>${NewTime}!</strong></p>
 	<p>This is Barebones Website To Allow Quick Navigation of Random Projects</p>
 	`
@@ -87,9 +89,8 @@ function SetEasyDate(){
 
 function SetFirstName(){
 	var User = netlifyIdentity.currentUser()
-	console.log(User)
 	var NameArray = User.user_metadata.full_name.split(" ")
-	console.log(NameArray)
+	FirstName = NameArray[0]
 }
 
 window.RootDataSet = document.documentElement.dataset
