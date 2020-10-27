@@ -13,6 +13,7 @@ function DetectUser(){
 	}else{
 		console.log("User Found! - " + user.user_metadata.full_name)
 		SetEasyDate()
+		SetFirstName()
 		DarkCheck()
 		SetPage()
 	}
@@ -25,6 +26,7 @@ function SortUser(){
 	}else{
 		console.log("User Found! - " + user.user_metadata.full_name)
 		SetEasyDate()
+		SetFirstName()
 		DarkCheck()
 		SetPage()
 	}
@@ -85,6 +87,7 @@ function SetEasyDate(){
 
 function SetFirstName(){
 	var User = netlifyIdentity.currentUser()
+	console.log(User)
 	var NameArray = (User.full_name).split(" ")
 	console.log(NameArray)
 }
