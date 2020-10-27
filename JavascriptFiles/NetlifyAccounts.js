@@ -83,6 +83,12 @@ function SetEasyDate(){
 	NewTime = NewTime.join("/")
 }
 
+function SetFirstName(){
+	var User = netlifyIdentity.currentUser()
+	var NameArray = (User.full_name).split(" ")
+	console.log(NameArray)
+}
+
 window.RootDataSet = document.documentElement.dataset
 
 function DarkCheck(){
@@ -128,27 +134,4 @@ function DarkSwitch(){
 		return
 	}
 	console.log("Could Not Change Colors")
-}
-
-//testing commands
-function SDF(){
-	netlifyIdentity.gotrue.currentUser().update({
-		data: {
-			Theme: "Dark"
-		}
-	}).then(user => console.log(user))
-}
-function SLF(){
-	netlifyIdentity.gotrue.currentUser().update({
-		data: {
-			Theme: "Light"
-		}
-	}).then(user => console.log(user))
-}
-function STDF(){
-	netlifyIdentity.gotrue.currentUser().update({
-		data: {
-			Theme: ""
-		}
-	}).then(user => console.log(user))
 }
