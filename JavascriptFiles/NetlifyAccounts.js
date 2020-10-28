@@ -91,6 +91,11 @@ function SetFirstName(){
 	var User = netlifyIdentity.currentUser()
 	var NameArray = User.user_metadata.full_name.split(" ")
 	FirstName = NameArray[0]
+	netlifyIdentity.gotrue.currentUser().update({
+		data: {
+			FirstName: `${FirstName}`
+		}
+	})
 }
 
 window.RootDataSet = document.documentElement.dataset
