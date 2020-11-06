@@ -37,7 +37,7 @@ function SortUser(){
 function LogUser(){
 	User = netlifyIdentity.currentUser()
 	console.log(User)
-	return "User Array Listed"
+	return "User Array Listed Above"
 }
 
 function SetPage(){
