@@ -173,3 +173,14 @@ function UserInfo(){
 		return ""
 	}
 }
+
+function DateConverter(Starter){
+	Starter = "2020-10-22T23:04:44Z"
+	var [Day, Month, Year, Hour, Minute] = [0,0,0,0,0]
+	Year = Starter.slice(0,4)
+	Month = Starter.slice(4, 6)
+	Day = Starter.slice(6, 8)
+	Hour = Starter.slice(8,10)
+	Minute = Starter.slice(10,12)
+	return `${Hour}:${Minute}  ${Month}/${Day}/${Year}`
+}
