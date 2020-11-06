@@ -70,28 +70,28 @@ function Creation(){
 	if (User.created_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Created at:</strong> ${DateConverter(User.created_at)}
+			<strong>Created at:</strong> ${UTCDateConverter(User.created_at)}
 		</li>
 		`)
 	}
 	if (User.confirmation_sent_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Confirmation Sent at:</strong> ${DateConverter(User.confirmation_sent_at)}
+			<strong>Confirmation Sent at:</strong> ${UTCDateConverter(User.confirmation_sent_at)}
 		</li>
 		`)
 	}
 	if (User.confirmed_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Confirmed at:</strong> ${DateConverter(User.confirmed_at)}
+			<strong>Confirmed at:</strong> ${UTCDateConverter(User.confirmed_at)}
 		</li>
 		`)
 	}
 	if (User.updated_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Last Updated:</strong> ${DateConverter(User.updated_at)}
+			<strong>Last Updated:</strong> ${UTCDateConverter(User.updated_at)}
 		</li>
 		`)
 	}
@@ -201,4 +201,10 @@ function DateConverter(Starter){
 	}
 	//Returning of the Formatted Date
 	return `${Hour}:${Minute}${AorP} Pacific Time  ${Month}/${Day}/${Year}`
+}
+
+function UTCDateConverter(Starter){
+	var [Day, Month, Year, Hour, Minute, AorP] = [0,0,0,0,0,""]
+	var LocalTime = new Date(Starter)
+	return `${LocalTime}`
 }
