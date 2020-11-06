@@ -54,11 +54,13 @@ function SetPage(){
 		<input type="button" onclick="NetlifyLogout()" value="Logout">
 		`
 	}
+	return "Set Page Function Complete"
 }
 function NetlifyLogout(){
 	//Does Not work With Firefox!!!!
 	netlifyIdentity.logout()
 	location.reload()
+	return "Loging out of Netlify Account"
 }
 
 function SecretFunction(){
@@ -67,6 +69,7 @@ function SecretFunction(){
 			SecretFunction: "You Found The Secret Function"
 		}
 	}).then(user => console.log(user))
+	return "Secret Function was Found!"
 }
 
 UglyTime = user.confirmed_at
@@ -101,6 +104,7 @@ function SetFirstName(){
 			FirstName: `${FirstName}`
 		}
 	})
+	return "First Name was Set"
 }
 
 window.RootDataSet = document.documentElement.dataset
@@ -110,11 +114,11 @@ function DarkCheck(){
 	Theme = User.user_metadata.Theme
 	if(Theme == "Light"){
 		window.RootDataSet.theme = "Light"
-		return
+		return "Theme set to Light"
 	}
 	if(Theme == "Dark"){
 		window.RootDataSet.theme = "Dark"
-		return
+		return "Them set to Dark"
 	}
 	if(Theme == undefined | Theme == ""){
 		window.RootDataSet.theme = "Light"
@@ -123,7 +127,7 @@ function DarkCheck(){
 				Theme: "Light"
 			}
 		})
-		return
+		return "Theme set to Light"
 	}
 }
 
@@ -136,7 +140,7 @@ function DarkSwitch(){
 				Theme: "Dark"
 			}
 		})
-		return
+		return "Theme set to Dark"
 	}
 	if (RootDataSet.theme == "Dark"){
 		window.RootDataSet.theme = "Light"
@@ -145,7 +149,7 @@ function DarkSwitch(){
 				Theme: "Light"
 			}
 		})
-		return
+		return "Theme set to Light"
 	}
 	console.log("Could Not Change Colors")
 }
