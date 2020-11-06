@@ -182,7 +182,7 @@ function UTCDateConverter(Starter){
 	return `${LocalTime} on ${LocalDate}`
 }
 
-function ApplicationData(Request){
+/*function ApplicationData(Request){
 	Request.push(`
 	<li>
 		Application Storage (Stored in User Metadata)
@@ -198,4 +198,4 @@ function ApplicationData(Request){
 	}else{
 		return ""
 	}
-}
+} */ 
