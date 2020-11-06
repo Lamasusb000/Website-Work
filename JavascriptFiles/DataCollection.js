@@ -193,6 +193,7 @@ function DateConverter(Starter){
 		}else{
 			if(Hour == 24){
 				AorP = "AM"
+				Hour = Hour - 12
 			}
 		}
 	}
