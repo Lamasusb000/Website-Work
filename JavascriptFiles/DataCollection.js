@@ -64,7 +64,7 @@ function Creation(){
 	//Starting Request
 	Request.push(`
 	<li> 
-		<strong>Account Creation</strong>
+		<strong>Account Creation (Local Time Zone)</strong>
 		<ul>
 	`)
 	if (User.created_at != undefined){
