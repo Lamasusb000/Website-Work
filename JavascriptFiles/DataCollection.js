@@ -115,7 +115,7 @@ function UserInfo(){
 	if (User.id != undefined){
 		Request.push(`
 		<li>
-			Id Token (Do Not Share): ${User.id}
+			Id Token <strong>(Do Not Share)</strong>: ${User.id}
 		</li>
 		`)
 	}
