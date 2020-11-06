@@ -175,11 +175,17 @@ function UserInfo(){
 }
 
 function DateConverter(Starter){
-	var [Day, Month, Year, Hour, Minute] = [0,0,0,0,0]
+	var [Day, Month, Year, Hour, Minute, AorP] = [0,0,0,0,0,""]
 	Year = Starter.slice(0,4)
 	Month = Starter.slice(5, 7)
 	Day = Starter.slice(8, 10)
 	Hour = Starter.slice(11,13)
 	Minute = Starter.slice(14,16)
-	return `${Hour}:${Minute}  ${Month}/${Day}/${Year}`
+	if (Hour > 12){
+		Hour = Hour - 12
+		AorP = "PM"
+	}else{
+		AorP = "AM"
+	}
+	return `${Hour}:${Minute}${AorP}  ${Month}/${Day}/${Year}`
 }
