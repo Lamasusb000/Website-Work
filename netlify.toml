@@ -4,4 +4,4 @@
     from = "/Users/*"
     to = "/.netlify/functions/:splat"
 [build.environment]
-  TZ = "UTC-6:00"
+  TZ = "America/Mazatlan"
