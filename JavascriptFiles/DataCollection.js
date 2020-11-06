@@ -175,13 +175,15 @@ function UserInfo(){
 }
 
 function DateConverter(Starter){
+	//Defining Temporary Variables
 	var [Day, Month, Year, Hour, Minute, AorP] = [0,0,0,0,0,""]
+	//Splicing Entry Date Into Independent Variables
 	Year = Starter.slice(0,4)
 	Month = Starter.slice(5, 7)
 	Day = Starter.slice(8, 10)
 	Hour = Starter.slice(11,13)
 	Minute = Starter.slice(14,16)
-	
+	//Determining If The Time is AM or PM
 	if(Hour >= 1 && Hour <= 11){
 		AorP = "AM"
 	}else{
@@ -197,6 +199,6 @@ function DateConverter(Starter){
 			}
 		}
 	}
-
+	//Returning of the Formatted Date
 	return `${Hour}:${Minute}${AorP}  ${Month}/${Day}/${Year}`
 }
