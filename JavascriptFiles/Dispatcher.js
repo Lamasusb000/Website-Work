@@ -42,7 +42,7 @@ function SetupRevist(){
     document.getElementById("WaveLength").value = `${WaveLength}`
     var DSPlist = []
     DSPlist.push("Buffer Text")
-    for (let i = i; i <= WaveInfo.length; i++) {
+    for (let i = 1; i <= WaveInfo.length; i++) {
         DSPlist.push(WaveInfo[i])        
     }
     var Waves = DSPlist.length
