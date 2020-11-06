@@ -19,19 +19,20 @@ function WebMeta(){
 	//starting request
 	Request.push(`
 	<li>
-		Website Metadata
+		<strong>Website Metadata</strong>
 		<ul>
 	`)
 	if (User.app_metadata.provider != undefined){
 		Request.push(`
 		<li>
-			Account Provider: ${User.app_metadata.provider}
+			<strong>Account Provider:</strong> ${User.app_metadata.provider}
 		</li>
 		`)
 	}
 	if (User.app_metadata.roles != undefined){
 		Request.push(`
-		<li>Roles:
+		<li>
+			<strong>Roles:</strong>
 			<ul>
 		`)
 		for (let i = 0; i < User.app_metadata.roles.length; i++) {
@@ -63,27 +64,27 @@ function Creation(){
 	//Starting Request
 	Request.push(`
 	<li> 
-		Account Creation
+		<strong>Account Creation</strong>
 		<ul>
 	`)
 	if (User.created_at != undefined){
 		Request.push(`
 		<li>
-			Created at: ${User.created_at}
+			<strong>Created at:</strong> ${User.created_at}
 		</li>
 		`)
 	}
 	if (User.confirmation_sent_at != undefined){
 		Request.push(`
 		<li>
-			Confirmation Sent at: ${User.confirmation_sent_at}
+			<strong>Confirmation Sent at:</strong> ${User.confirmation_sent_at}
 		</li>
 		`)
 	}
 	if (User.confirmed_at != undefined){
 		Request.push(`
 		<li>
-			Confirmed at: ${User.confirmed_at}
+			<strong>Confirmed at:</strong> ${User.confirmed_at}
 		</li>
 		`)
 	}
@@ -102,20 +103,21 @@ function Creation(){
 function UserInfo(){
 	var Request = []
 	Request.push(`
-	<li>User Information
+	<li>
+		<strong>User Information</strong>
 		<ul>
 	`)
 	if (User.email != undefined){
 		Request.push(`
 		<li>
-			Email: ${User.email}
+			<strong>Email:</strong> ${User.email}
 		</li>
 		`)
 	}
 	if (User.id != undefined){
 		Request.push(`
 		<li>
-			Id Token <strong>(Do Not Share)</strong>: ${User.id}
+			<strong>Id Token (Do Not Share)</strong>: ${User.id}
 		</li>
 		`)
 	}
@@ -123,34 +125,34 @@ function UserInfo(){
 	//User Metadata
 	Request.push(`
 	<li>
-		User Metadata
+		<strong>User Metadata</strong>
 		<ul>
 	`)
 	if (User.user_metadata.full_name != undefined){
 		Request.push(`
 		<li>
-			Full Name: ${User.user_metadata.full_name}
+			<strong>Full Name:</strong> ${User.user_metadata.full_name}
 		</li>
 		`)
 	}
 	if (User.user_metadata.FirstName != undefined){
 		Request.push(`
 		<li>
-			First Name: ${User.user_metadata.FirstName}
+			<strong>First Name:</strong> ${User.user_metadata.FirstName}
 		</li>
 		`)
 	}
 	if (User.user_metadata.SecretFunction != undefined){
 		Request.push(`
 		<li>
-			You've Found The Secret Function in The Code!
+			<strong>You've Found The Secret Function in The Code!</strong>
 		</li>
 		`)
 	}
 	if (User.user_metadata.Theme != undefined){
 		Request.push(`
 		<li>
-			Theme: ${User.user_metadata.Theme}
+			<strong>Theme:</strong> ${User.user_metadata.Theme}
 		</li>
 		`)
 	}
