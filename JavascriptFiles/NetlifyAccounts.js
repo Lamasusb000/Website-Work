@@ -36,19 +36,24 @@ function SortUser(){
 
 function SetPage(){
 	console.log(user)
-	const username = user.user_metadata.full_name
-	document.getElementById("Menu").innerHTML = `
-	<h1>Welcome ${FirstName}! To Junior's Random Project Index</h1>
-	<p>You've been a Member Since <strong>${NewTime}!</strong></p>
-	<p>This is Barebones Website To Allow Quick Navigation of Random Projects</p>
-	`
-	document.getElementById("Login").innerHTML = `
-	<h1 class="span">Account</h1>
-	<p class="span">(Beta Feature)</p>
-	<p>Previous Sessions Take Effect Upon Logging in</p>
-	<p>logout and Back in To Request Changes.</p>
-	<input type="button" onclick="NetlifyLogout()" value="Logout">
-	`
+	const Menu = document.getElementById("Menu")
+	if (Menu != undefined){
+		Menu.innerHTML = `
+		<h1>Welcome ${FirstName}! To Junior's Random Project Index</h1>
+		<p>You've been a Member Since <strong>${NewTime}!</strong></p>
+		<p>This is Barebones Website To Allow Quick Navigation of Random Projects</p>
+		`
+	}
+	const Login = document.getElementById("Login")
+	if (Login != undefined){
+		Login.innerHTML = `
+		<h1 class="span">Account</h1>
+		<p class="span">(Beta Feature)</p>
+		<p>Previous Sessions Take Effect Upon Logging in</p>
+		<p>logout and Back in To Request Changes.</p>
+		<input type="button" onclick="NetlifyLogout()" value="Logout">
+		`
+	}
 }
 function NetlifyLogout(){
 	//Does Not work With Firefox!!!!
