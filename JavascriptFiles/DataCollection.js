@@ -5,7 +5,7 @@ var Output = ""
 function StartData(){
 	User = netlifyIdentity.currentUser()
 	Output = `
-	<ul
+	<ul>
 		${AppMeta()}
 		${Creation()}
 	</ul>
