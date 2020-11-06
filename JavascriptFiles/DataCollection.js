@@ -25,7 +25,7 @@ function WebMeta(){
 	if (User.app_metadata.provider != undefined){
 		Request.push(`
 		<li>
-			<strong>Account Provider:</strong> ${User.app_metadata.provider}
+			<strong>Account Provider:</strong><br> ${User.app_metadata.provider}
 		</li>
 		`)
 	}
@@ -70,28 +70,28 @@ function Creation(){
 	if (User.created_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Created at:</strong> ${UTCDateConverter(User.created_at)}
+			<strong>Created at:</strong><br> ${UTCDateConverter(User.created_at)}
 		</li>
 		`)
 	}
 	if (User.confirmation_sent_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Confirmation Sent at:</strong> ${UTCDateConverter(User.confirmation_sent_at)}
+			<strong>Confirmation Sent at:</strong><br> ${UTCDateConverter(User.confirmation_sent_at)}
 		</li>
 		`)
 	}
 	if (User.confirmed_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Confirmed at:</strong> ${UTCDateConverter(User.confirmed_at)}
+			<strong>Confirmed at:</strong><br> ${UTCDateConverter(User.confirmed_at)}
 		</li>
 		`)
 	}
 	if (User.updated_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Last Updated:</strong> ${UTCDateConverter(User.updated_at)}
+			<strong>Last Updated:</strong><br> ${UTCDateConverter(User.updated_at)}
 		</li>
 		`)
 	}
@@ -117,14 +117,14 @@ function UserInfo(){
 	if (User.email != undefined){
 		Request.push(`
 		<li>
-			<strong>Email:</strong> ${User.email}
+			<strong>Email:</strong><br> ${User.email}
 		</li>
 		`)
 	}
 	if (User.id != undefined){
 		Request.push(`
 		<li>
-			<strong>Id Token (Do Not Share)</strong>: ${User.id}
+			<strong>Id Token (Do Not Share):</strong><br> ${User.id}
 		</li>
 		`)
 	}
@@ -138,14 +138,14 @@ function UserInfo(){
 	if (User.user_metadata.full_name != undefined){
 		Request.push(`
 		<li>
-			<strong>Full Name:</strong> ${User.user_metadata.full_name}
+			<strong>Full Name:</strong><br> ${User.user_metadata.full_name}
 		</li>
 		`)
 	}
 	if (User.user_metadata.FirstName != undefined){
 		Request.push(`
 		<li>
-			<strong>First Name:</strong> ${User.user_metadata.FirstName}
+			<strong>First Name:</strong><br> ${User.user_metadata.FirstName}
 		</li>
 		`)
 	}
@@ -159,7 +159,7 @@ function UserInfo(){
 	if (User.user_metadata.Theme != undefined){
 		Request.push(`
 		<li>
-			<strong>Theme:</strong> ${User.user_metadata.Theme}
+			<strong>Theme:</strong><br> ${User.user_metadata.Theme}
 		</li>
 		`)
 	}
