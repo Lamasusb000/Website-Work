@@ -10,7 +10,6 @@ function StartData(){
 		${Creation()}
 	</ul>
 	`
-	Output = Output.join("")
 	console.log(Output)
 	document.getElementById("Data").innerHTML = Output
 }
@@ -54,7 +53,7 @@ function AppMeta(){
 	`)
 	//Conditional return
 	if (Request.length > 2){
-		return Request
+		return Request.join("")
 	}else{
 		return ""
 	}
@@ -94,7 +93,7 @@ function Creation(){
 	</li>
 	`)
 	if (Request.length > 2){
-		return Request
+		return Request.join("")
 	}else{
 		return ""
 	}
