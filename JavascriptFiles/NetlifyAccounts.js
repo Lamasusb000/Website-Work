@@ -34,8 +34,13 @@ function SortUser(){
 	}
 }
 
+function LogUser(){
+	User = netlifyIdentity.currentUser()
+	console.log(User)
+	return "User Array Listed"
+}
+
 function SetPage(){
-	console.log(user)
 	const Menu = document.getElementById("Menu")
 	if (Menu != undefined){
 		Menu.innerHTML = `
