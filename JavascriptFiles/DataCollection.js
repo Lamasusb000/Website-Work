@@ -70,28 +70,28 @@ function Creation(){
 	if (User.created_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Created at:</strong> ${User.created_at}
+			<strong>Created at:</strong> ${DateConverter(User.created_at)}
 		</li>
 		`)
 	}
 	if (User.confirmation_sent_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Confirmation Sent at:</strong> ${User.confirmation_sent_at}
+			<strong>Confirmation Sent at:</strong> ${DateConverter(User.confirmation_sent_at)}
 		</li>
 		`)
 	}
 	if (User.confirmed_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Confirmed at:</strong> ${User.confirmed_at}
+			<strong>Confirmed at:</strong> ${DateConverter(User.confirmed_at)}
 		</li>
 		`)
 	}
 	if (User.updated_at != undefined){
 		Request.push(`
 		<li>
-			<strong>Last Updated:</strong> ${User.updated_at}
+			<strong>Last Updated:</strong> ${DateConverter(User.updated_at)}
 		</li>
 		`)
 	}
@@ -175,7 +175,6 @@ function UserInfo(){
 }
 
 function DateConverter(Starter){
-	Starter = "2020-10-22T23:04:44Z"
 	var [Day, Month, Year, Hour, Minute] = [0,0,0,0,0]
 	Year = Starter.slice(0,4)
 	Month = Starter.slice(5, 7)
