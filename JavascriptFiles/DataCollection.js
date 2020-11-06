@@ -104,7 +104,7 @@ function UserInfo(){
 	var Request = []
 	Request.push(`
 	<li>
-		<strong>User Information</strong>
+		<strong>Account Information</strong>
 		<ul>
 	`)
 	if (User.email != undefined){
