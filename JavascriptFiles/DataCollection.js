@@ -11,6 +11,7 @@ function StartData(){
 	</ul>
 	`
 	console.log(Output)
+	document.getElementById("Data").innerHTML = Output
 }
 
 function AppMeta(){
@@ -24,7 +25,7 @@ function AppMeta(){
 	if (User.app_metadata.provider != undefined){
 		Request.push(`
 		<li>
-			${User.app_metadata.provider}
+			Account Provider: ${User.app_metadata.provider}
 		</li>
 		`)
 	}
