@@ -1,31 +1,100 @@
-var DataCollection = []
+netlifyIdentity.on('init', User => StartData())
+var User = ""
+var Output = ""
 
-function FindData(){
-	if (localStorage.getItem("Theme") != undefined){
-		DataCollection.push("Theme Data is Set To: " + localStorage.getItem("Theme"))
+function StartData(){
+	User = netlifyIdentity.currentUser()
+	Output = `
+	<ul
+		${AppMeta()}
+		${Creation()}
+	</ul>
+	`
+	console.log(Output)
+}
+
+function AppMeta(){
+	var Request = []
+	//starting request
+	Request.push(`
+	<li>
+		App Metadata
+		<ul>
+	`)
+	if (User.app_metadata.provider != undefined){
+		Request.push(`
+		<li>
+			${User.app_metadata.provider}
+		</li>
+		`)
 	}
-	if (localStorage.getItem("User's Name",) != undefined){
-		DataCollection.push("User's Name is Set To: " + localStorage.getItem("User's Name"))
+	if (User.app_metadata.roles != undefined){
+		Request.push(`
+		<li>Roles:
+			<ul>
+		`)
+		for (let i = 0; i < User.app_metadata.roles.length; i++) {
+			Request.push(`
+			<li>
+				${User.app_metadata.roles[i]}
+			</li>
+			`)
+		}
+		Request.push(`
+			</ul>
+		</li>
+		`)
 	}
-	if (DataCollection.length > 0){
-	document.getElementById("DataOutput").innerHTML = "<p class='animated'>" + DataCollection.join("<br>") + "</p>"
-	document.getElementById("ViewData").setAttribute("value", "Hide Your Data")
-	document.getElementById("ViewData").setAttribute("onclick", "HideData()")
+	//Capping request
+	Request.push(`
+		</ul>
+	</li>
+	`)
+	//Conditional return
+	if (Request.length > 2){
+		return Request
 	}else{
-	document.getElementById("DataOutput").innerHTML = "<p class='animated'>Currently, No Data is Stored in Your Browser</p>"
-	setTimeout(HideData, 2500)
+		return ""
 	}
-	DataCollection = []
 }
+function Creation(){
+	var Request = []
+	//Starting Request
+	Request.push(`
+	<li> 
+		Account Creation
+		<ul>
+	`)
+	if (User.created_at != undefined){
+		Request.push(`
+		<li>
+			Created at: ${User.created_at}
+		</li>
+		`)
+	}
+	if (User.confirmation_sent_at != undefined){
+		Request.push(`
+		<li>
+			Confirmation Sent at: ${User.confirmation_sent_at}
+		</li>
+		`)
+	}
+	if (User.confirmed_at != undefined){
+		Request.push(`
+		<li>
+			Confirmed at: ${User.confirmed_at}
+		</li>
+		`)
+	}
+	//Capping Request
+	Request.push(`
+		</ul>
+	</li>
+	`)
+	if (Request.length > 2){
+		return Request
+	}else{
+		return ""
+	}
 
-function HideData(){
-	document.getElementById("DataOutput").innerHTML = "<p class='animated'>View Data Here: <br></p>"
-	document.getElementById("ViewData").setAttribute("value", "View Your Data")
-	document.getElementById("ViewData").setAttribute("onclick", "FindData()")
-}
-
-function DeleteData(){
-	localStorage.clear()
-	document.getElementById("DataOutput").innerHTML = "<p class='animated'>Your Data has been Deleted!</p>"
-	setTimeout(HideData, 3000)
 }
