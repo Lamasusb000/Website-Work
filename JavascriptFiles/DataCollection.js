@@ -177,8 +177,10 @@ function UserInfo(){
 function DateConverter(Starter){
 	Starter = "2020-10-22T23:04:44Z"
 	var [Day, Month, Year, Hour, Minute] = [0,0,0,0,0]
+	console.log(Starter)
 	Year = Starter.slice(0,4)
-	Month = Starter.slice(4, 6)
+	console.log(Starter)
+	Month = Starter.slice(3, 5)
 	Day = Starter.slice(6, 8)
 	Hour = Starter.slice(8,10)
 	Minute = Starter.slice(10,12)
