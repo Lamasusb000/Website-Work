@@ -38,6 +38,7 @@ function SetRouteData(){
 
 function SetupRevist(){
     var WaveInfo = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo
+    WaveInfo = JSON.parse(WaveInfo)
     var WaveLength = WaveInfo[0]
     document.getElementById("WaveLength").value = `${WaveLength}`
     var DSPlist = []
