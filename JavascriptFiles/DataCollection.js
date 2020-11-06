@@ -158,4 +158,9 @@ function UserInfo(){
 		</li>
 		`)
 	}
+	if (Request.length > 2){
+		return Request.join("")
+	}else{
+		return ""
+	}
 }
