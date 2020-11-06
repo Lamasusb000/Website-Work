@@ -119,45 +119,45 @@ function UserInfo(){
 		</li>
 		`)
 	}
-	if (User.user_metadata.length > 1){
+	
+	//User Metadata
+	Request.push(`
+	<li>
+		User Metadata
+		<ul>
+	`)
+	if (User.user_metadata.full_name != undefined){
 		Request.push(`
 		<li>
-			User Metadata
-			<ul>
-		`)
-		if (User.user_metadata.full_name != undefined){
-			Request.push(`
-			<li>
-				Full Name: ${User.user_metadata.full_name}
-			</li>
-			`)
-		}
-		if (User.user_metadata.FirstName != undefined){
-			Request.push(`
-			<li>
-				First Name: ${User.user_metadata.FirstName}
-			</li>
-			`)
-		}
-		if (User.user_metadata.SecretFunction != undefined){
-			Request.push(`
-			<li>
-				You've Found The Secret Function in The Code!
-			</li>
-			`)
-		}
-		if (User.user_metadata.Theme != undefined){
-			Request.push(`
-			<li>
-				Theme: ${User.user_metadata.Theme}
-			</li>
-			`)
-		}
-		Request.push(`
-			</ul>
+			Full Name: ${User.user_metadata.full_name}
 		</li>
 		`)
 	}
+	if (User.user_metadata.FirstName != undefined){
+		Request.push(`
+		<li>
+			First Name: ${User.user_metadata.FirstName}
+		</li>
+		`)
+	}
+	if (User.user_metadata.SecretFunction != undefined){
+		Request.push(`
+		<li>
+			You've Found The Secret Function in The Code!
+		</li>
+		`)
+	}
+	if (User.user_metadata.Theme != undefined){
+		Request.push(`
+		<li>
+			Theme: ${User.user_metadata.Theme}
+		</li>
+		`)
+	}
+	Request.push(`
+		</ul>
+	</li>
+	`)
 	if (Request.length > 2){
 		return Request.join("")
 	}else{
