@@ -206,5 +206,6 @@ function DateConverter(Starter){
 function UTCDateConverter(Starter){
 	var [Day, Month, Year, Hour, Minute, AorP] = [0,0,0,0,0,""]
 	var LocalTime = new Date(Starter)
+	LocalTime = LocalTime.toLocaleDateString("en-US")
 	return `${LocalTime}`
 }
