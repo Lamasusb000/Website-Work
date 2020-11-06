@@ -64,4 +64,5 @@ function SetupRevist(){
     <input type="button" value="Set Route List" onclick="SetRouteData()">
     `)
     RouteList.innerHTML = WaveList.join("<br>")
+    return "Preivous Information Pasted"
 }
