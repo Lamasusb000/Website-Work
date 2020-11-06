@@ -181,11 +181,21 @@ function DateConverter(Starter){
 	Day = Starter.slice(8, 10)
 	Hour = Starter.slice(11,13)
 	Minute = Starter.slice(14,16)
-	if (Hour > 12){
-		Hour = Hour - 12
-		AorP = "PM"
-	}else{
+	
+	if(Hour >= 1 && Hour <= 11){
 		AorP = "AM"
+	}else{
+		if(Hour >= 12 && Hour <= 23){
+			AorP = "PM"
+			if(Hour > 12){
+				Hour = Hour - 12
+			}
+		}else{
+			if(Hour == 24){
+				AorP = "AM"
+			}
+		}
 	}
+
 	return `${Hour}:${Minute}${AorP}  ${Month}/${Day}/${Year}`
 }
