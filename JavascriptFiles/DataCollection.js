@@ -88,6 +88,13 @@ function Creation(){
 		</li>
 		`)
 	}
+	if (User.updated_at != undefined){
+		Request.push(`
+		<li>
+			<strong>Last Updated:</strong> ${User.updated_at}
+		</li>
+		`)
+	}
 	//Capping Request
 	Request.push(`
 		</ul>
