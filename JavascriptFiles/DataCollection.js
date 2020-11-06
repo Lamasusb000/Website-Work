@@ -200,5 +200,5 @@ function DateConverter(Starter){
 		}
 	}
 	//Returning of the Formatted Date
-	return `${Hour}:${Minute}${AorP}  ${Month}/${Day}/${Year}`
+	return `${Hour}:${Minute}${AorP} Pacific Time  ${Month}/${Day}/${Year}`
 }
