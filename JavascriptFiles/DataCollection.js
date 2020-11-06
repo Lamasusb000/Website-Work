@@ -6,20 +6,20 @@ function StartData(){
 	User = netlifyIdentity.currentUser()
 	Output = `
 	<ul>
-		${AppMeta()}
+		${WebMeta()}
 		${Creation()}
+		${UserInfo()}
 	</ul>
 	`
-	console.log(Output)
 	document.getElementById("Data").innerHTML = Output
 }
 
-function AppMeta(){
+function WebMeta(){
 	var Request = []
 	//starting request
 	Request.push(`
 	<li>
-		App Metadata
+		Website Metadata
 		<ul>
 	`)
 	if (User.app_metadata.provider != undefined){
@@ -97,5 +97,65 @@ function Creation(){
 	}else{
 		return ""
 	}
+}
 
+function UserInfo(){
+	var Request = []
+	Request.push(`
+	<li>User Information
+		<ul>
+	`)
+	if (User.email != undefined){
+		Request.push(`
+		<li>
+			Email: ${User.email}
+		</li>
+		`)
+	}
+	if (User.id != undefined){
+		Request.push(`
+		<li>
+			Id Token (Do Not Share): ${User.id}
+		</li>
+		`)
+	}
+	if (User.user_metadata.length > 1){
+		Request.push(`
+		<li>
+			User Metadata
+			<ul>
+		`)
+		if (User.user_metadata.full_name != undefined){
+			Request.push(`
+			<li>
+				Full Name: ${User.user_metadata.full_name}
+			</li>
+			`)
+		}
+		if (User.user_metadata.FirstName != undefined){
+			Request.push(`
+			<li>
+				First Name: ${User.user_metadata.FirstName}
+			</li>
+			`)
+		}
+		if (User.user_metadata.SecretFunction != undefined){
+			Request.push(`
+			<li>
+				You've Found The Secret Function in The Code!
+			</li>
+			`)
+		}
+		if (User.user_metadata.Theme != undefined){
+			Request.push(`
+			<li>
+				Theme: ${User.user_metadata.Theme}
+			</li>
+			`)
+		}
+		Request.push(`
+			</ul>
+		</li>
+		`)
+	}
 }
