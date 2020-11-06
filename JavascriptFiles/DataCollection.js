@@ -173,40 +173,10 @@ function UserInfo(){
 		return ""
 	}
 }
-
-function DateConverter(Starter){
-	//Defining Temporary Variables
-	var [Day, Month, Year, Hour, Minute, AorP] = [0,0,0,0,0,""]
-	//Splicing Entry Date Into Independent Variables
-	Year = Starter.slice(0,4)
-	Month = Starter.slice(5, 7)
-	Day = Starter.slice(8, 10)
-	Hour = Starter.slice(11,13)
-	Minute = Starter.slice(14,16)
-	//Determining If The Time is AM or PM
-	if(Hour >= 1 && Hour <= 11){
-		AorP = "AM"
-	}else{
-		if(Hour >= 12 && Hour <= 23){
-			AorP = "PM"
-			if(Hour > 12){
-				Hour = Hour - 12
-			}
-		}else{
-			if(Hour == 24){
-				AorP = "AM"
-				Hour = Hour - 12
-			}
-		}
-	}
-	//Returning of the Formatted Date
-	return `${Hour}:${Minute}${AorP} Pacific Time  ${Month}/${Day}/${Year}`
-}
-
 function UTCDateConverter(Starter){
 	var LocalDate = new Date(Starter)
 	var LocalTime = new Date(Starter)
 	LocalDate = LocalDate.toLocaleDateString()
 	LocalTime = LocalTime.toLocaleTimeString()
-	return `${LocalDate} at ${LocalTime}`
+	return `${LocalTime} on ${LocalDate}`
 }
