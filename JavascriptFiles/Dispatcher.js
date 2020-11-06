@@ -31,7 +31,7 @@ function SetRouteData(){
 		data: {
 			Dispatcher: {
                 WaveInfo: {
-                    CycleOne: JSON.stringify(WaveInfo)
+                    CycleOne: `${JSON.stringify(WaveInfo)}`
                 }
             }
 		}
