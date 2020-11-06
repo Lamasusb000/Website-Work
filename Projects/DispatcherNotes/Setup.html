@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSSfiles/DarkMode.css">
     <link rel="stylesheet" href="/CSSfiles/CenterAligned.css">
+    <link rel="stylesheet" href="/CSSfiles/BetterInputs.css">
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="/JavascriptFiles/NetlifyAccounts.js"></script>
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -12,11 +13,11 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <title>Dispatcher</title>
+    <title>Dispatcher Setup</title>
 </head>
 <body>
-    <h1>Dispatcher</h1>
-    <select id="WaveSelect" onchange="SetCount()">
+    <h1>Dispatcher Setup</h1>
+    <select id="WaveSelect">
         <option value="undefined">Wave Selection</option>
         <option value="1">1 Wave</option>
         <option value="2">2 Waves</option>
@@ -30,6 +31,24 @@
         <option value="10">10 Waves</option>
         <option value="11">11 Waves</option>
     </select>
+    <select id="WaveLength">
+        <option value="5">5 Minutes Each</option>
+        <option value="10">10 Minutes Each</option>
+        <option value="15">15 Minutes Each</option>
+        <option value="20">20 Minutes Each</option>
+        <option value="25">25 Minutes Each</option>
+        <option value="30">30 Minutes Each</option>
+        <option value="35">35 Minutes Each</option>
+        <option value="40">40 Minutes Each</option>
+        <option value="45">45 Minutes Each</option>
+        <option value="50">50 Minutes Each</option>
+        <option value="55">55 Minutes Each</option>
+        <option value="60">60 Minutes Each</option>
+    </select>
+    <input type="button" value="Submit" onclick="SetCount()">
+    <div id="RouteList">
+        
+    </div>
     <script src="/JavascriptFiles/Dispatcher.js"></script>
 </body>
 </html>
