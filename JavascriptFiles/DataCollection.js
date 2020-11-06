@@ -204,8 +204,9 @@ function DateConverter(Starter){
 }
 
 function UTCDateConverter(Starter){
-	var [Day, Month, Year, Hour, Minute, AorP] = [0,0,0,0,0,""]
+	var LocalDate = new Date(Starter)
 	var LocalTime = new Date(Starter)
-	LocalTime = LocalTime.toLocaleDateString("en-US")
-	return `${LocalTime}`
+	LocalDate = LocalDate.toLocaleDateString()
+	LocalTime = LocalTime.toLocaleTimeString()
+	return `${LocalDate} at ${LocalTime}`
 }
