@@ -39,7 +39,7 @@ function SetRouteData(){
 }
 
 function SetupRevist(){
-    var WaveInfo = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo
+    var WaveInfo = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo.CycleOne
     WaveInfo = JSON.parse(WaveInfo)
     var WaveLength = WaveInfo[0]
     document.getElementById("WaveLength").value = `${WaveLength}`
