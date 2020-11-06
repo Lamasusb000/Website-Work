@@ -47,7 +47,7 @@ function SetupRevist(){
         DSPlist.push(WaveInfo[i])        
     }
     var Waves = DSPlist.length - 1
-    document.getElementById("WaveSelection").value = `${Waves}`
+    document.getElementById("WaveSelect").value = `${Waves}`
     RouteList = document.getElementById("RouteList")
     WaveList = []
     WaveList.push(`
