@@ -4,4 +4,4 @@
     from = "/Users/*"
     to = "/.netlify/functions/:splat"
 [build.environment]
-  TZ = "America/Mazatlan"
+  TZ = "America/New_York"
