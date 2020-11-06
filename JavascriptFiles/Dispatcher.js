@@ -29,7 +29,7 @@ function SetRouteData(){
 
     netlifyIdentity.gotrue.currentUser().update({
 		data: {
-			RouteData: {
+			Dispatcher: {
                 WaveInfo: `${JSON.stringify(WaveInfo)}`
             }
 		}
