@@ -10,6 +10,7 @@ function StartData(){
 		${Creation()}
 	</ul>
 	`
+	Output = Output.join("")
 	console.log(Output)
 	document.getElementById("Data").innerHTML = Output
 }
