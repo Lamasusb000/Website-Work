@@ -9,6 +9,7 @@ function StartData(){
 		${WebMeta()}
 		${Creation()}
 		${UserInfo()}
+		${ApplicationData()}
 	</ul>
 	`
 	document.getElementById("Data").innerHTML = Output
@@ -179,4 +180,22 @@ function UTCDateConverter(Starter){
 	LocalDate = LocalDate.toLocaleDateString()
 	LocalTime = LocalTime.toLocaleTimeString()
 	return `${LocalTime} on ${LocalDate}`
+}
+
+function ApplicationData(Request){
+	Request.push(`
+	<li>
+		Application Storage (Stored in User Metadata)
+		<ul>
+	`)
+
+	Request.push(`
+		</ul>
+	</li>
+	`)
+	if(Request.length > 2){
+		return Request.join("")
+	}else{
+		return ""
+	}
 }
