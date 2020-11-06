@@ -35,3 +35,32 @@ function SetRouteData(){
 		}
 	})
 }
+
+function SetupRevist(){
+    var WaveInfo = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo
+    var WaveLength = WaveInfo[0]
+    document.getElementById("WaveLength").value = `${WaveLength}`
+    var DSPlist = []
+    DSPlist.push("Buffer Text")
+    for (let i = i; i <= WaveInfo.length; i++) {
+        DSPlist.push(WaveInfo[i])        
+    }
+    var Waves = DSPlist.length
+
+    RouteList = document.getElementById("RouteList")
+    WaveList = []
+    WaveList.push(`
+    <h1>Wave Settings</h1>
+    <p>Resubmitting Erases Data</p>
+    `)
+    for (let i = 1; i <= Waves; i++) {
+        WaveList.push(`
+        <span>Wave ${i} DSP
+        <input type="text" placeholder="${DSPlist[i]}" id="DSP${i}"></span>
+        `)
+    }
+    WaveList.push(`
+    <input type="button" value="Set Route List" onclick="SetRouteData()">
+    `)
+    RouteList.innerHTML = WaveList.join("<br>")
+}
