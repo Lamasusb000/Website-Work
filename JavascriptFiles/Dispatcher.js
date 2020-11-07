@@ -90,7 +90,6 @@ function SetupRevist(Cycle){
     }
     WaveInfo = JSON.parse(WaveInfo)
     var WaveLength = WaveInfo[0]
-    document.getElementById("WaveLength").value = `${WaveLength}`
     var DSPlist = []
     DSPlist.push("Buffer Text")
     for (let i = 1; i < WaveInfo.length; i++) {
@@ -118,6 +117,7 @@ function SetupRevist(Cycle){
        <option value="60">60 Minutes Each</option>
     </select>
     `)
+    document.getElementById("WaveLength").value = `${WaveLength}`
     for (let i = 1; i <= Waves; i++) {
         WaveList.push(`
         <span>Wave ${i} DSP
