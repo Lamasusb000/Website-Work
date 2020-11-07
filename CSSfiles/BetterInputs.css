@@ -16,6 +16,9 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
+.Sided{
+	width: max-content;
+}
 
 .Sided span{
 	align-self: left;
