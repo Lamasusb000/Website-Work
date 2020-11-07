@@ -103,6 +103,20 @@ function SetupRevist(Cycle){
     WaveList.push(`
     <h1>Wave Settings</h1>
     <p>Resubmitting Erases Data</p>
+    <select id="WaveLength">
+        <option value="10">10 Minutes Each</option>
+        <option value="5">5 Minutes Each</option>
+        <option value="15">15 Minutes Each</option>
+        <option value="20">20 Minutes Each</option>
+        <option value="25">25 Minutes Each</option>
+        <option value="30">30 Minutes Each</option>
+        <option value="35">35 Minutes Each</option>
+        <option value="40">40 Minutes Each</option>
+        <option value="45">45 Minutes Each</option>
+        <option value="50">50 Minutes Each</option>
+        <option value="55">55 Minutes Each</option>
+       <option value="60">60 Minutes Each</option>
+    </select>
     `)
     for (let i = 1; i <= Waves; i++) {
         WaveList.push(`
