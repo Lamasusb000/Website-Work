@@ -51,7 +51,7 @@
     </div>
     <script src="/JavascriptFiles/Dispatcher.js"></script>
     <script>
-        SetupRevist()
+        netlifyIdentity.on('init', user => SetupRevist())
     </script>
 </body>
 </html>
