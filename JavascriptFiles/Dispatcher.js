@@ -33,6 +33,7 @@ function SetCount(){
         `)
     }
     WaveList.push(`
+    </div>
     <input type="button" value="Set Route List" onclick="SetRouteData()">
     `)
     RouteList.innerHTML = WaveList.join("")
