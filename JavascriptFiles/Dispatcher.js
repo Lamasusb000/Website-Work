@@ -1,10 +1,13 @@
 function SetCount(){
     Waves = document.getElementById("WaveSelect").value
     RouteList = document.getElementById("RouteList")
+    Cycle = document.getElementById("Cycle").value
     WaveList = []
     WaveList.push(`
-    <h1>Wave Settings</h1>
-    <p>Resubmitting Erases Data</p>
+    <h1 id="Cycle">Cycle ${Cycle} Settings</h1>
+    <div class="Sided">
+    <p>
+    <label>Wave Length</label>
     <select id="WaveLength">
         <option value="10">10 Minutes Each</option>
         <option value="5">5 Minutes Each</option>
@@ -17,8 +20,9 @@ function SetCount(){
         <option value="45">45 Minutes Each</option>
         <option value="50">50 Minutes Each</option>
         <option value="55">55 Minutes Each</option>
-        <option value="60">60 Minutes Each</option>
+       <option value="60">60 Minutes Each</option>
     </select>
+    </p>
     `)
     for (let i = 1; i <= Waves; i++) {
         WaveList.push(`
