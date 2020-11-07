@@ -104,7 +104,9 @@ function SetupRevist(Cycle){
     WaveList = []
     WaveList.push(`
     <h1 id="Cycle">Cycle ${Cycle} Settings</h1>
-    <label>Wave Length</label><select id="WaveLength">
+    <label>Wave Length</label>
+    <div class="Sided">
+    <select id="WaveLength">
         <option value="10">10 Minutes Each</option>
         <option value="5">5 Minutes Each</option>
         <option value="15">15 Minutes Each</option>
@@ -128,6 +130,7 @@ function SetupRevist(Cycle){
         `)
     }
     WaveList.push(`
+    </div>
     <input type="button" value="Set Route List" onclick="SetRouteData()">
     `)
     RouteList.innerHTML = WaveList.join("")

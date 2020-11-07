@@ -22,10 +22,6 @@ input::-webkit-inner-spin-button {
 	margin: auto;
 	text-align: inherit;
 }
-.Sided h1{
-	display: block;
-	text-align: inherit;
-}
 .Sided p{
 	display: table-row;
 	text-align: inherit;
