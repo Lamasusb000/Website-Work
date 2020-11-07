@@ -18,8 +18,8 @@ input::-webkit-inner-spin-button {
 }
 
 .Sided span{
-	align-items: left;
+	align-self: left;
 }
 .Sided input,select{
-	align-items: right;
+	align-self: right;
 }
