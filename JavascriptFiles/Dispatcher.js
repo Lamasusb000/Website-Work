@@ -127,7 +127,7 @@ function SetupRevist(Cycle){
         WaveList.push(`
         <p>
             <label>Wave ${i} DSP</label>
-            <input type="text" id="DSP${i}">
+            <input value="${DSPlist[i]}" type="text" id="DSP${i}">
         </p>
         `)
     }
