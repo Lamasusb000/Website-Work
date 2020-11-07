@@ -21,7 +21,7 @@ input::-webkit-inner-spin-button {
 	width: max-content;
 }
 
-.Sided span{
+.Sided label{
 	margin-left: 0;
 	text-align: left;
 }

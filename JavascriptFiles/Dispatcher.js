@@ -22,8 +22,8 @@ function SetCount(){
     `)
     for (let i = 1; i <= Waves; i++) {
         WaveList.push(`
-        <span>Wave ${i} DSP
-        <input type="text" id="DSP${i}"></span>
+        <label>Wave ${i} DSP</label>
+        <input type="text" id="DSP${i}">
         `)
     }
     WaveList.push(`
