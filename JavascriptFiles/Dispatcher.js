@@ -34,7 +34,7 @@ function SetCount(){
     }
     WaveList.push(`
     </div>
-    <input type="button" value="Cancel Editing" onclick="SetupRevist()">
+    <input type="button" value="Reload Without Saving" onclick="SetupRevist()">
     <input type="button" value="Set Route List" onclick="SetRouteData()">
     <div id="Message"></div>
     `)
@@ -142,7 +142,7 @@ function SetupRevist(Cycle){
     }
     WaveList.push(`
     </div>
-    <input type="button" value="Cancel Editing" onclick="SetupRevist()">
+    <input type="button" value="Reload Without Saving" onclick="SetupRevist()">
     <input type="button" value="Set Route List" onclick="SetRouteData()">
     <div id="Message"></div>
     `)
