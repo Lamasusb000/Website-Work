@@ -130,7 +130,7 @@ function SetupRevist(Cycle){
     WaveList.push(`
     <input type="button" value="Set Route List" onclick="SetRouteData()">
     `)
-    RouteList.innerHTML = WaveList.join("<br>")
+    RouteList.innerHTML = WaveList.join("")
     document.getElementById("WaveLength").value = `${WaveLength}`
     return "Preivous Information Pasted"
 }

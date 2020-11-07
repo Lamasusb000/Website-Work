@@ -20,12 +20,14 @@ input::-webkit-inner-spin-button {
 	display: table;
 	width: max-content;
 	margin: auto;
-	text-align: center;
+	text-align: inherit;
 }
 .Sided p{
 	display: table-row;
+	text-align: inherit;
 }
 .Sided label, input, select{
+	text-align: inherit;
 	display: table-cell;
 	padding: 0;
 }
