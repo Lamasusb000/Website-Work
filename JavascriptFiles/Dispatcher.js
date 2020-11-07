@@ -102,7 +102,7 @@ function SetupRevist(Cycle){
     WaveList.push(`
     <h1>Wave Settings</h1>
     <p>Resubmitting Erases Data</p>
-    <select id="WaveLength">
+    <span>Wave Length</span><select id="WaveLength">
         <option value="10">10 Minutes Each</option>
         <option value="5">5 Minutes Each</option>
         <option value="15">15 Minutes Each</option>
