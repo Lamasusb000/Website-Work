@@ -19,6 +19,7 @@ input::-webkit-inner-spin-button {
 .Sided{
 	display: table;
 	width: max-content;
+	margin: auto;
 }
 .Sided p{
 	display: table-row;
