@@ -16,3 +16,10 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
+
+.Sided span{
+	align-items: left;
+}
+.Sided input,select{
+	align-items: right;
+}
