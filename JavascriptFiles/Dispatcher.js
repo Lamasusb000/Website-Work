@@ -79,6 +79,7 @@ function ChangeSetupCycle(){
 
 function SetupRevist(Cycle){
     if(Cycle == "One" | Cycle == undefined){
+        Cycle = "One"
         var WaveInfo = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo.CycleOne
     }
     if (Cycle == "Two"){
