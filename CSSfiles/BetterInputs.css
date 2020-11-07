@@ -20,10 +20,12 @@ input::-webkit-inner-spin-button {
 	display: table;
 	width: max-content;
 	margin: auto;
+	text-align: center;
 }
 .Sided p{
 	display: table-row;
 }
 .Sided label, input, select{
 	display: table-cell;
+	padding: 0;
 }
