@@ -17,14 +17,12 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 .Sided{
-	margin: auto;
+	display: table;
 	width: max-content;
 }
-
-.Sided label{
-	margin-left: 0;
-	text-align: left;
+.Sided p{
+	display: table-row;
 }
-.Sided input,select{
-	margin-right: 0;
+.Sided label, input, select{
+	display: table-cell;
 }
