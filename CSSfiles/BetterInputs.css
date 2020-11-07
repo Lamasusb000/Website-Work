@@ -22,8 +22,8 @@ input::-webkit-inner-spin-button {
 }
 
 .Sided span{
-	align-items: left;
+	text-align: left;
 }
 .Sided input,select{
-	align-items: right;
+	right: 0;
 }
