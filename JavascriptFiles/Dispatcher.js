@@ -117,7 +117,6 @@ function SetupRevist(Cycle){
        <option value="60">60 Minutes Each</option>
     </select>
     `)
-    document.getElementById("WaveLength").value = `${WaveLength}`
     for (let i = 1; i <= Waves; i++) {
         WaveList.push(`
         <span>Wave ${i} DSP
@@ -128,5 +127,6 @@ function SetupRevist(Cycle){
     <input type="button" value="Set Route List" onclick="SetRouteData()">
     `)
     RouteList.innerHTML = WaveList.join("<br>")
+    document.getElementById("WaveLength").value = `${WaveLength}`
     return "Preivous Information Pasted"
 }
