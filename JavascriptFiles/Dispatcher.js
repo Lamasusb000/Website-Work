@@ -106,6 +106,7 @@ function SetupRevist(Cycle){
     <h1 id="Cycle">Cycle ${Cycle} Settings</h1>
     <label>Wave Length</label>
     <div class="Sided">
+    <p>
     <select id="WaveLength">
         <option value="10">10 Minutes Each</option>
         <option value="5">5 Minutes Each</option>
@@ -120,6 +121,7 @@ function SetupRevist(Cycle){
         <option value="55">55 Minutes Each</option>
        <option value="60">60 Minutes Each</option>
     </select>
+    </p>
     `)
     for (let i = 1; i <= Waves; i++) {
         WaveList.push(`
