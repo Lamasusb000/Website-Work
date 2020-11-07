@@ -36,11 +36,14 @@ function SetCount(){
     </div>
     <input type="button" value="Cancel Editing" onclick="SetupRevist()">
     <input type="button" value="Set Route List" onclick="SetRouteData()">
+    <div id="Message"></div>
     `)
     RouteList.innerHTML = WaveList.join("")
 }
 
 function SetRouteData(){
+    document.getElementById("Message").innerHTML = `<p class="animated">Saving Cycle Data</p>`
+    setTimeout(ResetMessage, 3000)
     Waves = document.getElementById("WaveSelect").value
     WaveLength = document.getElementById("WaveLength").value
     Cycle = document.getElementById("Cycle").value
@@ -141,8 +144,13 @@ function SetupRevist(Cycle){
     </div>
     <input type="button" value="Cancel Editing" onclick="SetupRevist()">
     <input type="button" value="Set Route List" onclick="SetRouteData()">
+    <div id="Message"></div>
     `)
     RouteList.innerHTML = WaveList.join("")
     document.getElementById("WaveLength").value = `${WaveLength}`
     return "Preivous Information Pasted"
+}
+
+function ResetMessage(){
+    document.getElementById("Message").innerHTML = ""
 }
