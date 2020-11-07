@@ -29,11 +29,13 @@ function SetRouteData(){
     }
 
     if (Cycle == "One"){
+        var PreviousWave = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo.CycleTwo
         netlifyIdentity.gotrue.currentUser().update({
             data: {
                 Dispatcher: {
                     WaveInfo: {
-                        CycleOne: `${JSON.stringify(WaveInfo)}`
+                        CycleOne: `${JSON.stringify(WaveInfo)}`,
+                        CycleTwo: `${PreviousWave}`
                     }
                 }
             }
@@ -41,15 +43,18 @@ function SetRouteData(){
         return "Set to CycleOne"
     }
     if(Cycle == "Two"){
+        var PreviousWave = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo.CycleOne
         netlifyIdentity.gotrue.currentUser().update({
             data: {
                 Dispatcher: {
                     WaveInfo: {
+                        CycleOne: `${PreviousWave}`,
                         CycleTwo: `${JSON.stringify(WaveInfo)}`
                     }
                 }
             }
         })
+        return "Set to CycleTwo"
     }
 }
 
