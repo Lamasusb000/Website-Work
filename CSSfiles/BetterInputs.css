@@ -23,6 +23,7 @@ input::-webkit-inner-spin-button {
 
 .Sided span{
 	margin-left: 0;
+	background-color: black;
 }
 .Sided input,select{
 	margin-right: 0;
