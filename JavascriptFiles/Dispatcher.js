@@ -34,6 +34,7 @@ function SetCount(){
     }
     WaveList.push(`
     </div>
+    <input type="button" value="Cancel Editing" onclick="SetupRevist()">
     <input type="button" value="Set Route List" onclick="SetRouteData()">
     `)
     RouteList.innerHTML = WaveList.join("")
@@ -138,6 +139,7 @@ function SetupRevist(Cycle){
     }
     WaveList.push(`
     </div>
+    <input type="button" value="Cancel Editing" onclick="SetupRevist()">
     <input type="button" value="Set Route List" onclick="SetRouteData()">
     `)
     RouteList.innerHTML = WaveList.join("")
