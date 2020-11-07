@@ -22,11 +22,14 @@ input::-webkit-inner-spin-button {
 	margin: auto;
 	text-align: inherit;
 }
+.Sided h1{
+	text-align: inherit;
+}
 .Sided p{
 	display: table-row;
 	text-align: inherit;
 }
-.Sided label, input, select{
+.Sided label, input, select, option{
 	text-align: inherit;
 	display: table-cell;
 	padding: 0;

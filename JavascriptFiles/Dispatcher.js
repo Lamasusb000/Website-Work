@@ -104,7 +104,7 @@ function SetupRevist(Cycle){
     WaveList = []
     WaveList.push(`
     <h1 id="Cycle">Cycle ${Cycle} Settings</h1>
-    <span>Wave Length</span><select id="WaveLength">
+    <label>Wave Length</label><select id="WaveLength">
         <option value="10">10 Minutes Each</option>
         <option value="5">5 Minutes Each</option>
         <option value="15">15 Minutes Each</option>
