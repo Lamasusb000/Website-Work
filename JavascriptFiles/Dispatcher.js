@@ -21,26 +21,52 @@ function SetCount(){
 function SetRouteData(){
     Waves = document.getElementById("WaveSelect").value
     WaveLength = document.getElementById("WaveLength").value
+    Cycle = document.getElementById("Cycle").value
     WaveInfo = []
     WaveInfo.push(WaveLength)
     for (let i = 1; i <= Waves; i++) {
         WaveInfo.push(document.getElementById(`DSP${i}`).value)
     }
 
-    netlifyIdentity.gotrue.currentUser().update({
-		data: {
-			Dispatcher: {
-                WaveInfo: {
-                    CycleOne: `${JSON.stringify(WaveInfo)}`
+    if (Cycle == "One"){
+        netlifyIdentity.gotrue.currentUser().update({
+            data: {
+                Dispatcher: {
+                    WaveInfo: {
+                        CycleOne: `${JSON.stringify(WaveInfo)}`
+                    }
                 }
             }
-		}
-	})
+        })
+        return "Set to CycleOne"
+    }
+    if(Cycle == "Two"){
+        netlifyIdentity.gotrue.currentUser().update({
+            data: {
+                Dispatcher: {
+                    WaveInfo: {
+                        CycleTwo: `${JSON.stringify(WaveInfo)}`
+                    }
+                }
+            }
+        })
+    }
 }
 
-function SetupRevist(){
-    var WaveInfo = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo.CycleOne
+function ChangeSetupCycle(){
+    Cycle = document.getElementById("Cycle").value
+    SetupRevist(Cycle)
+}
+
+function SetupRevist(Cycle){
+    if(Cycle == "One"){
+        var WaveInfo = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo.CycleOne
+    }
+    if (Cycle == "Two"){
+        var WaveInfo = netlifyIdentity.currentUser().user_metadata.Dispatcher.WaveInfo.CycleTwo
+    }
     if(WaveInfo == undefined){
+        document.getElementById("RouteList").innerHTML = ""
         return "NoSavedInfo"
     }
     WaveInfo = JSON.parse(WaveInfo)

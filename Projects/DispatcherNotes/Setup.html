@@ -17,7 +17,11 @@
 </head>
 <body>
     <h1>Dispatcher Setup</h1>
-    <select id="WaveSelect">
+    <select id="Cycle">
+        <option value="One">Cycle 1</option>
+        <option value="Two">Cycle 2</option>
+    </select>
+    <select id="WaveSelect" onchange="ChangeSetupCycle()">
         <option value="undefined">Wave Selection</option>
         <option value="1">1 Wave</option>
         <option value="2">2 Waves</option>
